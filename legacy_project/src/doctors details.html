@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/ea49b7d84d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./output.css">
+
+  <title>Document</title>
+</head>
+
+<body class="bg-gray-200">
+
+  
+    <!-- ✅ Navbar (Fixed Top + Linked Pages) -->
+    <nav id="navbar"
+        class="fixed top-11 left-1/2 transform -translate-x-1/2 bg-white shadow-md rounded-xl w-[80%] flex justify-between items-center px-8 py-4 z-50 transition-all duration-500 ease-in-out">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+            <a href="index.html">
+                <img src="/img/Logo Dark.png" alt="Docfind Logo" class="h-10 w-auto" />
+            </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-6 items-center text-[#00464B] font-semibold">
+            <a href="index.html" class="hover:text-[#2E95A0]">Home</a>
+            <a href="doctorlist.html" class="hover:text-[#2E95A0]">Doctors</a>
+            <a href="about.html" class="hover:text-[#2E95A0]">About</a>
+            <a href="services.html" class="hover:text-[#2E95A0]">Services</a>
+            <a href="news and updates.html" class="hover:text-[#2E95A0]">News</a>
+            <a href="contact.html" class="hover:text-[#2E95A0]">Contact</a>
+            <a href="doctorlist.html"
+                class="bg-[#2E95A0] text-white px-5 py-2 rounded hover:bg-[#23737b] transition">Find A Doctor +</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-[#00464B] focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </nav>
+  <header class=""
+    style="height: 550px; width: 100%; background-image: url(/img/Mask\ Group\ 16.png); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <h1 class="text-[#005963] flex justify-center translate-y-9/2 font-bold text-6xl">Doctors Details</h1>
+    <p class="text-[#005963] flex justify-center translate-y-24/2 ">Home | Doctors Details</p>
+  </header>
+
+  <!-- -------------------next section---------------------------- -->
+
+
+  <!-- Doctor Info Card -->
+  <section class="bg-gray-50 flex flex-col items-center justify-center min-h-screen">
+    <div class="max-w-5xl w-full bg-white border rounded-md shadow-sm flex items-center gap-6 p-6 mx-auto">
+
+      <!-- Left: Doctor Image -->
+      <div class="ml-30">
+        <img src="/img/Mask Group 29.png" alt="Doctor" class="rounded-md object-cover h-48 w-40">
+      </div>
+
+      <!-- Right: Info Section -->
+      <div class="flex-1">
+        <h2 class="text-lg font-semibold text-teal-800">Kathy Jackson</h2>
+        <div class="flex items-center text-yellow-400 text-sm mb-1">
+          ★★★★☆ <span class="text-gray-600 text-sm ml-2">(38)</span>
+        </div>
+        <p class="text-gray-700 font-semibold mb-2">Obstetrics & Gynecology</p>
+
+        <div class="grid grid-cols-2 gap-y-2 text-sm text-gray-600">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-phone text-teal-700"></i>
+            <span>(741)376-5689</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-map-marker-alt text-teal-700"></i>
+            <span>Cuzco</span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <i class="fas fa-envelope text-teal-700"></i>
+            <span>marilyn.pierce@mail.com</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-award text-teal-700"></i>
+            <span>6 - 10 Yrs Experience</span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <i class="fas fa-info-circle text-teal-700"></i>
+            <span>Metus ipsum convallis</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-calendar text-teal-700"></i>
+            <span>Tue, Wed, Thu, Fri</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </section>
+
+  <!-- next section -->
+  <div class="w-full bg-white px-6 md:px-16 py-10">
+    <h2 class="text-3xl text-[#005963] ml-10">Overview Of White Plains Hospitals</h2>
+    <p class="mt-5 text-[#005963] ml-10">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam odio aliquam explicabo, <br>
+      obcaecati nulla pariatur provident sit assumenda voluptas, br voluptatum minus!
+      Excepturi saepe dolor <br> deleniti, cum necessitatibus natus sapiente iusto harum, hic sunt ab iure
+      explicabo, ex omnis? <br> Dolorum reiciendis blanditiis nulla distinctio repellendus nesciunt facilis
+      <br>recusandae vero corrupti ullam.
+    </p>
+
+    <h2 class="text-3xl text-[#005963] ml-10 mt-10">Subspecilities</h2>
+    <p class="mt-5 text-[#005963] ml-10">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo debitis,
+      deleniti itaque quod minima totam tempore <br> eos earum minus atque blanditiis quia consequatur,
+      voluptatibus non dolorem accusamus inventore quibusdam excepturi.
+    </p>
+
+    <!-- Subspecialities Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-4 text-[#0b646e] text-[15px] leading-tight mt-8">
+      <main class="flex justify-center items-center gap-10">
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#7db0b4]" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span class="font-semibold">Obstetrics & Gynecology</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#7db0b4]" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span class="font-semibold">Adult Congenital Heart Disease</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#7db0b4]" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+          <span class="font-semibold">Heart Failure & Transplantation</span>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Patient Experience Section -->
+  <section class="px-6 md:px-20 py-12 bg-white text-[#0b646e]">
+    <!-- Heading -->
+    <h2 class="text-2xl font-bold mb-8">Patient Experience</h2>
+
+    <!-- Reviews Container -->
+    <div class="space-y-6">
+      <!-- Card 1 -->
+      <div class="flex justify-between items-start border rounded-xl p-6 shadow-sm">
+        <div class="flex items-center gap-4">
+          <img src="https://i.pravatar.cc/80?img=1" alt="Carol Gray" class="w-16 h-16 rounded-full object-cover" />
+          <div>
+            <h3 class="font-bold text-lg flex items-center gap-2">
+              Carol Gray
+              <span class="flex text-[#0b646e]">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+              <span class="text-sm text-gray-500">(4/5)</span>
+            </h3>
+            <p class="text-gray-600 leading-snug mt-1">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labor
+            </p>
+          </div>
+        </div>
+        <span class="text-gray-400 text-sm font-medium">07 March</span>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flex justify-between items-start border rounded-xl p-6 shadow-sm">
+        <div class="flex items-center gap-4">
+          <img src="https://i.pravatar.cc/80?img=2" alt="Jose Bradley" class="w-16 h-16 rounded-full object-cover" />
+          <div>
+            <h3 class="font-bold text-lg flex items-center gap-2">
+              Jose Bradley
+              <span class="flex text-[#0b646e]">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+              <span class="text-sm text-gray-500">(4/5)</span>
+            </h3>
+            <p class="text-gray-600 leading-snug mt-1">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            </p>
+          </div>
+        </div>
+        <span class="text-gray-400 text-sm font-medium">19 August</span>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flex justify-between items-start border rounded-xl p-6 shadow-sm">
+        <div class="flex items-center gap-4">
+          <img src="https://i.pravatar.cc/80?img=3" alt="Vincent Reyes" class="w-16 h-16 rounded-full object-cover" />
+          <div>
+            <h3 class="font-bold text-lg flex items-center gap-2">
+              Vincent Reyes
+              <span class="flex text-[#0b646e]">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </span>
+              <span class="text-sm text-gray-500">(4/5)</span>
+            </h3>
+            <p class="text-gray-600 leading-snug mt-1">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            </p>
+          </div>
+        </div>
+        <span class="text-gray-400 text-sm font-medium">24 January</span>
+      </div>
+    </div>
+
+    <!-- See More Button -->
+    <div class="mt-8">
+      <button
+        class="flex items-center gap-2 border border-[#0b646e] text-[#0b646e] font-semibold py-2 px-6 rounded-lg hover:bg-[#0b646e] hover:text-white transition-all">
+        See More
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- next section-->
+
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 md:px-16 bg-[#f9f6f8]">
+    <main class="flex justify-center items-center mt-[-100px]">
+      <section
+        class="w-[90%] md:w-[80%] lg:w-[70%] bg-white shadow-md rounded-2xl flex flex-col md:flex-row justify-center items-center px-8 py-5 md:py-6 space-y-6 md:space-y-0 md:divide-x divide-gray-200">
+
+        <!-- Address -->
+        <div class="flex items-center gap-3 md:w-1/3 justify-center md:justify-start px-4">
+          <div class="text-teal-600 text-2xl">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <p class="text-gray-600 text-sm">Our Address</p>
+            <h4 class="font-semibold text-gray-800 text-[15px]">Drive Chicago, IL 60607</h4>
+          </div>
+        </div>
+
+        <!-- Call -->
+        <div class="flex items-center gap-3 md:w-1/3 justify-center md:justify-start px-4">
+          <div class="text-teal-600 text-2xl">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div>
+            <p class="text-gray-600 text-sm">Call Us</p>
+            <h4 class="font-semibold text-gray-800 text-[15px]">360-779-2228</h4>
+          </div>
+        </div>
+
+        <!-- Mail -->
+        <div class="flex items-center gap-3 md:w-1/3 justify-center md:justify-start px-4">
+          <div class="text-teal-600 text-2xl">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div>
+            <p class="text-gray-600 text-sm">Our Mail</p>
+            <h4 class="font-semibold text-gray-800 text-[15px]">yourname@mail.com</h4>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <div class="max-w-7xl mt-10 mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+
+      <!-- Logo + Text -->
+      <div>
+        <div class="flex items-center space-x-2 mb-4">
+          <img src="/img/Logo Dark.png" alt="">
+          <h2 class="text-2xl font-bold text-teal-700"></h2>
+        </div>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Lorem ipsum dolor sit amet, consect etuer adipiscing elit, sed diam nonu mmy nibh euis.
+        </p>
+
+        <!-- Social Icons -->
+        <div class="flex space-x-3">
+          <a href="#"
+            class="bg-teal-600 text-white w-9 h-9 flex items-center justify-center rounded-full hover:bg-teal-700 transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#"
+            class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#"
+            class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="#"
+            class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#"
+            class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+            <i class="fab fa-pinterest"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-gray-800">Services</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-teal-600">Conditions</a></li>
+          <li><a href="#" class="hover:text-teal-600">Terms of Use</a></li>
+          <li><a href="#" class="hover:text-teal-600">Our Services</a></li>
+          <li><a href="#" class="hover:text-teal-600">New Guests List</a></li>
+          <li><a href="#" class="hover:text-teal-600">The Team List</a></li>
+        </ul>
+      </div>
+
+      <!-- Useful Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-gray-800">Useful Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-teal-600">Conditions</a></li>
+          <li><a href="#" class="hover:text-teal-600">Terms of Use</a></li>
+          <li><a href="#" class="hover:text-teal-600">Our Services</a></li>
+          <li><a href="#" class="hover:text-teal-600">New Guests List</a></li>
+          <li><a href="#" class="hover:text-teal-600">The Team List</a></li>
+        </ul>
+      </div>
+
+      <!-- Subscribe -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4 text-gray-800">Subscribe</h3>
+        <form class="flex flex-col space-y-3">
+          <input type="email" placeholder="Email"
+            class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500">
+          <button type="submit"
+            class="bg-teal-600 text-white py-2 rounded-md hover:bg-teal-700 transition">Subscribe</button>
+        </form>
+        <p class="text-sm text-gray-600 mt-4">
+          Get the latest updates via email.<br>
+          Any time you may unsubscribe
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

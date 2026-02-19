@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#015D63] flex items-center justify-center min-h-screen">
+
+  <!-- Appointment Card -->
+  <div class="bg-white rounded-2xl shadow-lg w-[700px] p-8 relative">
+    <!-- Close Button -->
+    <button
+      class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl font-bold focus:outline-none">✕</button>
+
+    <!-- Title -->
+    <h1 class="text-2xl font-semibold text-center text-[#013A3F] mb-8">Appointment Details</h1>
+
+    <!-- Header Info -->
+    <div class="flex justify-between items-center mb-6">
+      <p class="text-gray-700 text-lg">
+        <span class="font-medium">Appt. ID:</span>
+        <span class="text-[#00A0A0] font-semibold">#012</span>
+      </p>
+      <p class="text-gray-700 text-lg">
+        <span class="font-medium">Status:</span>
+        <span class="text-[#00A0A0] font-semibold">Booked</span>
+      </p>
+    </div>
+
+    <!-- Section Titles (Moved Below IDs) -->
+    <div class="flex justify-between mb-2">
+      <h2 class="text-[#00A0A0] font-semibold text-lg border-b border-gray-300 pb-1 text-center">
+        Patient Details
+      </h2>
+      <h2 class="text-[#00A0A0] font-semibold text-lg border-b border-gray-300 pb-1  text-center">
+        Appt. Details
+      </h2>
+    </div>
+
+    <!-- Details Section -->
+    <div class="grid grid-cols-2 mt-6 gap-10">
+      <!-- Left Column -->
+      <div class="space-y-3">
+        <p><span class="text-gray-700 font-medium">Name</span><br>
+          <span class="text-[#00A0A0] font-semibold">Miss. Sameera Kashif</span>
+        </p>
+        <p><span class="text-gray-700 font-medium">DOB</span><br>
+          <span class="text-[#00A0A0] font-semibold">Miss. Sameera Kashif</span>
+        </p>
+        <p><span class="text-gray-700 font-medium">Email</span><br>
+          <span class="text-[#00A0A0] font-semibold">sameerakashif@hotmail.com</span>
+        </p>
+        <p><span class="text-gray-700 font-medium">Phone</span><br>
+          <span class="text-[#00A0A0] font-semibold">+92 231 123232 32</span>
+        </p>
+      </div>
+
+      <!-- Right Column -->
+      <div class="space-y-3">
+        <p><span class="text-gray-700 font-medium">Department</span><br>
+          <span class="text-[#00A0A0] font-semibold">Gastrology</span>
+        </p>
+        <p><span class="text-gray-700 font-medium">Doctor</span><br>
+          <span class="text-[#00A0A0] font-semibold">Dr. Muhammad Tufail</span>
+        </p>
+        <p><span class="text-gray-700 font-medium">Date</span><br>
+          <span class="text-[#00A0A0] font-semibold">02-07-2021</span>
+        </p>
+        <p><span class="text-gray-700 font-medium">Time</span><br>
+          <span class="text-[#00A0A0] font-semibold">03:40 PM</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

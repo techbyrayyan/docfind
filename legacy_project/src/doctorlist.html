@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/ea49b7d84d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./output.css">
+  <title>Document</title>
+</head>
+
+<body class="bg-gray-200">
+  
+    <!-- ✅ Navbar (Fixed Top + Linked Pages) -->
+    <nav id="navbar"
+        class="fixed top-11 left-1/2 transform -translate-x-1/2 bg-white shadow-md rounded-xl w-[80%] flex justify-between items-center px-8 py-4 z-50 transition-all duration-500 ease-in-out">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+            <a href="index.html">
+                <img src="/img/Logo Dark.png" alt="Docfind Logo" class="h-10 w-auto" />
+            </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-6 items-center text-[#00464B] font-semibold">
+            <a href="index.html" class="hover:text-[#2E95A0]">Home</a>
+            <a href="doctorlist.html" class="hover:text-[#2E95A0]">Doctors</a>
+            <a href="about.html" class="hover:text-[#2E95A0]">About</a>
+            <a href="services.html" class="hover:text-[#2E95A0]">Services</a>
+            <a href="news and updates.html" class="hover:text-[#2E95A0]">News</a>
+            <a href="contact.html" class="hover:text-[#2E95A0]">Contact</a>
+            <a href="doctorlist.html"
+                class="bg-[#2E95A0] text-white px-5 py-2 rounded hover:bg-[#23737b] transition">Find A Doctor +</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-[#00464B] focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </nav>
+  <header class=""
+    style="height: 550px; width: 100%; background-image: url(/img/Mask\ Group\ 16.png); background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <h1 class="text-[#005963] flex justify-center translate-y-9/2 font-bold text-6xl">Doctors</h1>
+    <p class="text-[#005963] flex justify-center translate-y-24/2 ">Home | Doctors</p>
+  </header>
+
+
+  <!-- next section -->
+
+
+  <div class="container mx-auto px-6 md:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+      <!-- Left Sidebar Filters -->
+      <div class="lg:col-span-1 space-y-6">
+        <!-- Specialty -->
+        <div class="bg-[#FAF5FF] p-5 rounded-md">
+          <h3 class="font-semibold text-gray-700 mb-3">Specialty</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li><input type="checkbox" class="mr-2">ENT</li>
+            <li><input type="checkbox" class="mr-2">Gastrologist</li>
+            <li><input type="checkbox" class="mr-2">Cardiologist</li>
+            <li><input type="checkbox" class="mr-2">Pulmonologist</li>
+            <li><input type="checkbox" class="mr-2">Urologist</li>
+          </ul>
+        </div>
+
+        <!-- Gender -->
+        <div class="bg-[#FAF5FF] p-5 rounded-md">
+          <h3 class="font-semibold text-gray-700 mb-3">Gender</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li><input type="radio" name="gender" class="mr-2" checked>No Preference</li>
+            <li><input type="radio" name="gender" class="mr-2">Male</li>
+            <li><input type="radio" name="gender" class="mr-2">Female</li>
+          </ul>
+        </div>
+
+        <!-- Years of Experience -->
+        <div class="bg-[#FAF5FF] p-5 rounded-md">
+          <h3 class="font-semibold text-gray-700 mb-4">Years of Experience</h3>
+          <input type="range" min="0" max="20" value="10" class="w-full accent-[#2E95A0]">
+          <p class="text-sm text-gray-600 mt-2">0 Years - 20 Years</p>
+        </div>
+      </div>
+
+      <!-- Right Doctor Cards -->
+      <div class="lg:col-span-3 space-y-6">
+
+        <!-- Top Section -->
+        <div class="flex justify-between items-center bg-[#FAF5FF] px-6 py-3 rounded-md">
+          <p class="text-gray-600 font-medium">Showing 1–6 of 60 Results</p>
+          <select class="border border-gray-300 rounded px-3 py-1 text-gray-600">
+            <option>Sort By</option>
+            <option>Experience</option>
+            <option>Rating</option>
+          </select>
+        </div>
+
+        <!-- Doctor Card 1 -->
+        <div class="bg-white rounded-lg shadow-sm p-5 flex flex-col md:flex-row gap-6 items-center md:items-start">
+          <img src="/img//Mask Group 29.png" alt="Doctor" class="w-28 h-28 object-cover rounded-lg">
+          <div class="flex-1 space-y-1">
+            <h3 class="text-lg font-semibold text-gray-800">Matthew Reyes</h3>
+            <p class="text-[#2E95A0] font-medium text-sm">Obstetrics & Gynecology</p>
+            <p class="text-sm text-gray-600">University of California San Francisco<br>Parnassus Campus</p>
+
+            <div class="flex items-center gap-6 text-sm text-gray-600 mt-2">
+              <p><i class="fa-solid fa-location-dot text-[#2E95A0] mr-1"></i> San Cristobal</p>
+              <p><i class="fa-solid fa-user-doctor text-[#2E95A0] mr-1"></i> 6–10 Yrs Experience</p>
+              <p><i class="fa-solid fa-calendar-days text-[#2E95A0] mr-1"></i> Tue, Wed, Thu, Fri</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center gap-3">
+            <button class="bg-[#2E95A0] text-white px-5 py-2 rounded hover:bg-[#23737b] transition">View
+              More</button>
+            <i class="fa-regular fa-heart text-gray-400 text-lg hover:text-[#2E95A0] cursor-pointer"></i>
+            <div class="text-sm text-gray-600 flex items-center">
+              <div class="text-[#facc15] mr-1">★★★★★</div> (58)
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor Card 2 -->
+        <div class="bg-white rounded-lg shadow-sm p-5 flex flex-col md:flex-row gap-6 items-center md:items-start">
+          <img src="/img//Mask Group 30.png" alt="Doctor" class="w-28 h-28 object-cover rounded-lg">
+          <div class="flex-1 space-y-1">
+            <h3 class="text-lg font-semibold text-gray-800">Matthew Fox</h3>
+            <p class="text-[#2E95A0] font-medium text-sm">Obstetrics & Gynecology</p>
+            <p class="text-sm text-gray-600">University of California San Francisco<br>Parnassus Campus</p>
+
+            <div class="flex items-center gap-6 text-sm text-gray-600 mt-2">
+              <p><i class="fa-solid fa-location-dot text-[#2E95A0] mr-1"></i> Zanzibar Town</p>
+              <p><i class="fa-solid fa-user-doctor text-[#2E95A0] mr-1"></i> 6–10 Yrs Experience</p>
+              <p><i class="fa-solid fa-calendar-days text-[#2E95A0] mr-1"></i> Tue, Wed, Thu, Fri</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center gap-3">
+            <button class="bg-[#2E95A0] text-white px-5 py-2 rounded hover:bg-[#23737b] transition">View
+              More</button>
+            <i class="fa-regular fa-heart text-gray-400 text-lg hover:text-[#2E95A0] cursor-pointer"></i>
+            <div class="text-sm text-gray-600 flex items-center">
+              <div class="text-[#facc15] mr-1">★★★★☆</div> (58)
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor Card 3 -->
+        <div class="bg-white rounded-lg shadow-sm p-5 flex flex-col md:flex-row gap-6 items-center md:items-start">
+          <img src="/img//Mask Group 31.png" alt="Doctor" class="w-28 h-28 object-cover rounded-lg">
+          <div class="flex-1 space-y-1">
+            <h3 class="text-lg font-semibold text-gray-800">Jessica Lawson</h3>
+            <p class="text-[#2E95A0] font-medium text-sm">Obstetrics & Gynecology</p>
+            <p class="text-sm text-gray-600">University of California San Francisco<br>Parnassus Campus</p>
+
+            <div class="flex items-center gap-6 text-sm text-gray-600 mt-2">
+              <p><i class="fa-solid fa-location-dot text-[#2E95A0] mr-1"></i> Cuzco</p>
+              <p><i class="fa-solid fa-user-doctor text-[#2E95A0] mr-1"></i> 6–10 Yrs Experience</p>
+              <p><i class="fa-solid fa-calendar-days text-[#2E95A0] mr-1"></i> Tue, Wed, Thu, Fri</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center gap-3">
+            <button class="bg-[#2E95A0] text-white px-5 py-2 rounded hover:bg-[#23737b] transition">View
+              More</button>
+            <i class="fa-regular fa-heart text-gray-400 text-lg hover:text-[#2E95A0] cursor-pointer"></i>
+            <div class="text-sm text-gray-600 flex items-center">
+              <div class="text-[#facc15] mr-1">★★★★★</div> (58)
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Doctor Card 4 -->
+        <div class="bg-white rounded-lg shadow-sm p-5 flex flex-col md:flex-row gap-6 items-center md:items-start">
+          <img src="/img//Mask Group 32.png" alt="Doctor" class="w-28 h-28 object-cover rounded-lg">
+          <div class="flex-1 space-y-1">
+            <h3 class="text-lg font-semibold text-gray-800">Jessica Lawson</h3>
+            <p class="text-[#2E95A0] font-medium text-sm">Obstetrics & Gynecology</p>
+            <p class="text-sm text-gray-600">University of California San Francisco<br>Parnassus Campus</p>
+
+            <div class="flex items-center gap-6 text-sm text-gray-600 mt-2">
+              <p><i class="fa-solid fa-location-dot text-[#2E95A0] mr-1"></i> Cuzco</p>
+              <p><i class="fa-solid fa-user-doctor text-[#2E95A0] mr-1"></i> 6–10 Yrs Experience</p>
+              <p><i class="fa-solid fa-calendar-days text-[#2E95A0] mr-1"></i> Tue, Wed, Thu, Fri</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center gap-3">
+            <button class="bg-[#2E95A0] text-white px-5 py-2 rounded hover:bg-[#23737b] transition">View
+              More</button>
+            <i class="fa-regular fa-heart text-gray-400 text-lg hover:text-[#2E95A0] cursor-pointer"></i>
+            <div class="text-sm text-gray-600 flex items-center">
+              <div class="text-[#facc15] mr-1">★★★★★</div> (58)
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Doctor Card 5 -->
+        <div class="bg-white rounded-lg shadow-sm p-5 flex flex-col md:flex-row gap-6 items-center md:items-start">
+          <img src="/img//Mask Group 29.png" alt="Doctor" class="w-28 h-28 object-cover rounded-lg">
+          <div class="flex-1 space-y-1">
+            <h3 class="text-lg font-semibold text-gray-800">Jessica Lawson</h3>
+            <p class="text-[#2E95A0] font-medium text-sm">Obstetrics & Gynecology</p>
+            <p class="text-sm text-gray-600">University of California San Francisco<br>Parnassus Campus</p>
+
+            <div class="flex items-center gap-6 text-sm text-gray-600 mt-2">
+              <p><i class="fa-solid fa-location-dot text-[#2E95A0] mr-1"></i> Cuzco</p>
+              <p><i class="fa-solid fa-user-doctor text-[#2E95A0] mr-1"></i> 6–10 Yrs Experience</p>
+              <p><i class="fa-solid fa-calendar-days text-[#2E95A0] mr-1"></i> Tue, Wed, Thu, Fri</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center gap-3">
+            <button class="bg-[#2E95A0] text-white px-5 py-2 rounded hover:bg-[#23737b] transition">View
+              More</button>
+            <i class="fa-regular fa-heart text-gray-400 text-lg hover:text-[#2E95A0] cursor-pointer"></i>
+            <div class="text-sm text-gray-600 flex items-center">
+              <div class="text-[#facc15] mr-1">★★★★★</div> (58)
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Doctor Card 6 -->
+        <div class="bg-white rounded-lg shadow-sm p-5 flex flex-col md:flex-row gap-6 items-center md:items-start">
+          <img src="/img//Mask Group 30.png" alt="Doctor" class="w-28 h-28 object-cover rounded-lg">
+          <div class="flex-1 space-y-1">
+            <h3 class="text-lg font-semibold text-gray-800">Jessica Lawson</h3>
+            <p class="text-[#2E95A0] font-medium text-sm">Obstetrics & Gynecology</p>
+            <p class="text-sm text-gray-600">University of California San Francisco<br>Parnassus Campus</p>
+
+            <div class="flex items-center gap-6 text-sm text-gray-600 mt-2">
+              <p><i class="fa-solid fa-location-dot text-[#2E95A0] mr-1"></i> Cuzco</p>
+              <p><i class="fa-solid fa-user-doctor text-[#2E95A0] mr-1"></i> 6–10 Yrs Experience</p>
+              <p><i class="fa-solid fa-calendar-days text-[#2E95A0] mr-1"></i> Tue, Wed, Thu, Fri</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center gap-3">
+            <button class="bg-[#2E95A0] text-white px-5 py-2 rounded hover:bg-[#23737b] transition">View
+              More</button>
+            <i class="fa-regular fa-heart text-gray-400 text-lg hover:text-[#2E95A0] cursor-pointer"></i>
+            <div class="text-sm text-gray-600 flex items-center">
+              <div class="text-[#facc15] mr-1">★★★★★</div> (58)
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor Card 3 -->
+        <div class="bg-white rounded-lg shadow-sm p-5 flex flex-col md:flex-row gap-6 items-center md:items-start">
+          <img src="/img//Mask Group 32.png" alt="Doctor" class="w-28 h-28 object-cover rounded-lg">
+          <div class="flex-1 space-y-1">
+            <h3 class="text-lg font-semibold text-gray-800">Jessica Lawson</h3>
+            <p class="text-[#2E95A0] font-medium text-sm">Obstetrics & Gynecology</p>
+            <p class="text-sm text-gray-600">University of California San Francisco<br>Parnassus Campus</p>
+
+            <div class="flex items-center gap-6 text-sm text-gray-600 mt-2">
+              <p><i class="fa-solid fa-location-dot text-[#2E95A0] mr-1"></i> Cuzco</p>
+              <p><i class="fa-solid fa-user-doctor text-[#2E95A0] mr-1"></i> 6–10 Yrs Experience</p>
+              <p><i class="fa-solid fa-calendar-days text-[#2E95A0] mr-1"></i> Tue, Wed, Thu, Fri</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col items-center gap-3">
+            <button class="bg-[#2E95A0] text-white px-5 py-2 rounded hover:bg-[#23737b] transition">View
+              More</button>
+            <i class="fa-regular fa-heart text-gray-400 text-lg hover:text-[#2E95A0] cursor-pointer"></i>
+            <div class="text-sm text-gray-600 flex items-center">
+              <div class="text-[#facc15] mr-1">★★★★★</div> (58)
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+
+
+    <main class="flex justify-center items-center gap-5 py-10">
+      <div class="h-20 w-20 rounded-full bg-[#0a5860] text-white flex justify-center items-center text-xl font-bold">
+        1
+      </div>
+
+      <div
+        class="h-20 w-20 rounded-full bg-[#a8e3ea] text-[#0a5860] flex justify-center items-center text-xl font-bold">
+        2
+      </div>
+
+      <div
+        class="h-20 w-20 rounded-full bg-[#a8e3ea] text-[#0a5860] flex justify-center items-center text-xl font-bold">
+        &gt;
+      </div>
+    </main>
+
+    <!-- Footer -->
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 md:px-16 bg-[#f9f6f8]">
+      <main class="flex justify-center items-center mt-[-100px]">
+        <section
+          class="w-[90%] md:w-[80%] lg:w-[70%] bg-white shadow-md rounded-2xl flex flex-col md:flex-row justify-center items-center px-8 py-5 md:py-6 space-y-6 md:space-y-0 md:divide-x divide-gray-200">
+
+          <!-- Address -->
+          <div class="flex items-center gap-3 md:w-1/3 justify-center md:justify-start px-4">
+            <div class="text-teal-600 text-2xl">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <p class="text-gray-600 text-sm">Our Address</p>
+              <h4 class="font-semibold text-gray-800 text-[15px]">Drive Chicago, IL 60607</h4>
+            </div>
+          </div>
+
+          <!-- Call -->
+          <div class="flex items-center gap-3 md:w-1/3 justify-center md:justify-start px-4">
+            <div class="text-teal-600 text-2xl">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div>
+              <p class="text-gray-600 text-sm">Call Us</p>
+              <h4 class="font-semibold text-gray-800 text-[15px]">360-779-2228</h4>
+            </div>
+          </div>
+
+          <!-- Mail -->
+          <div class="flex items-center gap-3 md:w-1/3 justify-center md:justify-start px-4">
+            <div class="text-teal-600 text-2xl">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+              <p class="text-gray-600 text-sm">Our Mail</p>
+              <h4 class="font-semibold text-gray-800 text-[15px]">yourname@mail.com</h4>
+            </div>
+          </div>
+
+        </section>
+      </main>
+      <div class="max-w-7xl mt-10 mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+
+        <!-- Logo + Text -->
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <img src="/img/Logo Dark.png" alt="">
+            <h2 class="text-2xl font-bold text-teal-700"></h2>
+          </div>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Lorem ipsum dolor sit amet, consect etuer adipiscing elit, sed diam nonu mmy nibh euis.
+          </p>
+
+          <!-- Social Icons -->
+          <div class="flex space-x-3">
+            <a href="#"
+              class="bg-teal-600 text-white w-9 h-9 flex items-center justify-center rounded-full hover:bg-teal-700 transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#"
+              class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#"
+              class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="#"
+              class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#"
+              class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+              <i class="fab fa-pinterest"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-800">Services</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-teal-600">Conditions</a></li>
+            <li><a href="#" class="hover:text-teal-600">Terms of Use</a></li>
+            <li><a href="#" class="hover:text-teal-600">Our Services</a></li>
+            <li><a href="#" class="hover:text-teal-600">New Guests List</a></li>
+            <li><a href="#" class="hover:text-teal-600">The Team List</a></li>
+          </ul>
+        </div>
+
+        <!-- Useful Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-800">Useful Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-teal-600">Conditions</a></li>
+            <li><a href="#" class="hover:text-teal-600">Terms of Use</a></li>
+            <li><a href="#" class="hover:text-teal-600">Our Services</a></li>
+            <li><a href="#" class="hover:text-teal-600">New Guests List</a></li>
+            <li><a href="#" class="hover:text-teal-600">The Team List</a></li>
+          </ul>
+        </div>
+
+        <!-- Subscribe -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4 text-gray-800">Subscribe</h3>
+          <form class="flex flex-col space-y-3">
+            <input type="email" placeholder="Email"
+              class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500">
+            <butt on type="submit" class="bg-teal-600 text-white py-2 rounded-md  transition">Subscribe</button>
+          </form>
+          <p class="text-sm text-gray-600 mt-4">
+            Get the latest updates via email.<br>
+            Any time you may unsubscribe
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+
+
+    <!-- next section -->
+
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

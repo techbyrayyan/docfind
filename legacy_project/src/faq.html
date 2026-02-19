@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ea49b7d84d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./output.css">
+
+    <title>Document</title>
+</head>
+
+<body class="bg-gray-200">
+
+    <!-- ✅ Navbar (Fixed Top + Linked Pages) -->
+    <nav id="navbar"
+        class="fixed top-11 left-1/2 transform -translate-x-1/2 bg-white shadow-md rounded-xl w-[80%] flex justify-between items-center px-8 py-4 z-50 transition-all duration-500 ease-in-out">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+            <a href="index.html">
+                <img src="/img/Logo Dark.png" alt="Docfind Logo" class="h-10 w-auto" />
+            </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-6 items-center text-[#00464B] font-semibold">
+            <a href="index.html" class="hover:text-[#2E95A0]">Home</a>
+            <a href="doctorlist.html" class="hover:text-[#2E95A0]">Doctors</a>
+            <a href="about.html" class="hover:text-[#2E95A0]">About</a>
+            <a href="services.html" class="hover:text-[#2E95A0]">Services</a>
+            <a href="news and updates.html" class="hover:text-[#2E95A0]">News</a>
+            <a href="contact.html" class="hover:text-[#2E95A0]">Contact</a>
+            <a href="doctorlist.html"
+                class="bg-[#2E95A0] text-white px-5 py-2 rounded hover:bg-[#23737b] transition">Find A Doctor +</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-[#00464B] focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </nav>
+    <header class=""
+        style="height: 550px; width: 100%; background-image: url(/img/Mask\ Group\ 16.png); background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <h1 class="text-[#005963] flex justify-center translate-y-9/2 font-bold text-6xl">FAQ</h1>
+        <p class="text-[#005963] flex justify-center translate-y-24/2 ">Home | Faq</p>
+    </header>
+
+    <section class="flex justify-center items-start gap-5 bg-white w-full h-150 ">
+
+        <!-- next section -->
+        <div class="w-[700px] h-100 bg-white rounded-lg shadow-md border border-gray-200 mt-10">
+            <!-- Accordion Item -->
+            <div class="border-b border-gray-200">
+                <button onclick="toggleAccordion(1)"
+                    class="w-full flex justify-between items-center px-5 py-4 text-left font-semibold text-[#007b7b]">
+                    Can I make an appointment online with White Plains Hospital Kendi?
+                    <span id="icon-1" class="text-white bg-[#00b3b3] rounded-md p-1 text-sm font-bold">−</span>
+                </button>
+                <div id="content-1" class="px-5 pb-4 text-gray-600 text-sm">
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata.
+                </div>
+            </div>
+
+            <!-- Repeated FAQ Items -->
+            <div class="border-b border-gray-200">
+                <button onclick="toggleAccordion(2)"
+                    class="w-full flex justify-between items-center px-5 py-4 text-left font-semibold text-gray-800 hover:text-[#007b7b]">
+                    Does White Plains Hospital Kendi offer telehealth?
+                    <span id="icon-2" class="text-[#00b3b3] bg-[#e5f7f7] rounded-md p-1 text-sm font-bold">+</span>
+                </button>
+                <div id="content-2" class="hidden px-5 pb-4 text-gray-600 text-sm">
+                    Telehealth services are available for certain departments.
+                </div>
+            </div>
+
+            <div class="border-b border-gray-200">
+                <button onclick="toggleAccordion(3)"
+                    class="w-full flex justify-between items-center px-5 py-4 text-left font-semibold text-gray-800 hover:text-[#007b7b]">
+                    White Plains Hospital Kendi accepts insurance
+                    <span id="icon-3" class="text-[#00b3b3] bg-[#e5f7f7] rounded-md p-1 text-sm font-bold">+</span>
+                </button>
+                <div id="content-3" class="hidden px-5 pb-4 text-gray-600 text-sm">
+                    Yes, most major insurance plans are accepted.
+                </div>
+            </div>
+
+            <div class="border-b border-gray-200">
+                <button onclick="toggleAccordion(4)"
+                    class="w-full flex justify-between items-center px-5 py-4 text-left font-semibold text-gray-800 hover:text-[#007b7b]">
+                    Where is White Plains Hospital Kendi's office located?
+                    <span id="icon-4" class="text-[#00b3b3] bg-[#e5f7f7] rounded-md p-1 text-sm font-bold">+</span>
+                </button>
+                <div id="content-4" class="hidden px-5 pb-4 text-gray-600 text-sm">
+                    The hospital is located in White Plains, NY.
+                </div>
+            </div>
+
+            <div>
+                <button onclick="toggleAccordion(5)"
+                    class="w-full flex justify-between items-center px-5 py-4 text-left font-semibold text-gray-800 hover:text-[#007b7b]">
+                    What are White Plains Hospital Kendi's areas of care?
+                    <span id="icon-5" class="text-[#00b3b3] bg-[#e5f7f7] rounded-md p-1 text-sm font-bold">+</span>
+                </button>
+                <div id="content-5" class="hidden px-5 pb-4 text-gray-600 text-sm">
+                    The hospital provides gastroenterology, cardiology, and more.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- right section -->
+
+        <div class="w-[300px] bg-white rounded-lg shadow-md overflow-hidden mt-10">
+            <!-- Header -->
+            <div class="bg-[#e6f1f3] px-4 py-2 font-semibold text-gray-700">
+                Booking Summary
+            </div>
+
+            <!-- Body -->
+            <div class="p-4 space-y-2 text-sm text-gray-700">
+                <div class="flex justify-between">
+                    <span class="font-medium">Date</span>
+                    <span>07/10/2020</span>
+                </div>
+
+                <div class="flex justify-between">
+                    <span class="font-medium">Time</span>
+                    <span>08:30 PM</span>
+                </div>
+
+                <div class="flex justify-between">
+                    <span class="font-medium">Department</span>
+                    <span>Gastrolo­gist</span>
+                </div>
+
+                <div class="flex justify-between">
+                    <span class="font-medium">Doctor name</span>
+                    <span>Dr. Beatrice Willis</span>
+                </div>
+            </div>
+
+            <!-- Footer Button -->
+            <div class="px-4 pb-4">
+                <button
+                    class="w-full flex items-center justify-center gap-2 bg-[#00b3b3] hover:bg-[#009999] text-white font-medium py-2 rounded-md transition">
+                    Booked
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-------------------------------- next section ------------------------------------>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 md:px-16 bg-[#f9f6f8]">
+        <main class="flex justify-center items-center mt-[-100px]">
+            <section
+                class="w-[90%] md:w-[80%] lg:w-[70%] bg-white shadow-md rounded-2xl flex flex-col md:flex-row justify-center items-center px-8 py-5 md:py-6 space-y-6 md:space-y-0 md:divide-x divide-gray-200">
+
+                <!-- Address -->
+                <div class="flex items-center gap-3 md:w-1/3 justify-center md:justify-start px-4">
+                    <div class="text-teal-600 text-2xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-600 text-sm">Our Address</p>
+                        <h4 class="font-semibold text-gray-800 text-[15px]">Drive Chicago, IL 60607</h4>
+                    </div>
+                </div>
+
+                <!-- Call -->
+                <div class="flex items-center gap-3 md:w-1/3 justify-center md:justify-start px-4">
+                    <div class="text-teal-600 text-2xl">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-600 text-sm">Call Us</p>
+                        <h4 class="font-semibold text-gray-800 text-[15px]">360-779-2228</h4>
+                    </div>
+                </div>
+
+                <!-- Mail -->
+                <div class="flex items-center gap-3 md:w-1/3 justify-center md:justify-start px-4">
+                    <div class="text-teal-600 text-2xl">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-600 text-sm">Our Mail</p>
+                        <h4 class="font-semibold text-gray-800 text-[15px]">yourname@mail.com</h4>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+        <div class="max-w-7xl mt-10 mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+
+            <!-- Logo + Text -->
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <img src="/img/Logo Dark.png" alt="">
+                    <h2 class="text-2xl font-bold text-teal-700"></h2>
+                </div>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Lorem ipsum dolor sit amet, consect etuer adipiscing elit, sed diam nonu mmy nibh euis.
+                </p>
+
+                <!-- Social Icons -->
+                <div class="flex space-x-3">
+                    <a href="#"
+                        class="bg-teal-600 text-white w-9 h-9 flex items-center justify-center rounded-full hover:bg-teal-700 transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#"
+                        class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#"
+                        class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#"
+                        class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#"
+                        class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-gray-800">Services</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-teal-600">Conditions</a></li>
+                    <li><a href="#" class="hover:text-teal-600">Terms of Use</a></li>
+                    <li><a href="#" class="hover:text-teal-600">Our Services</a></li>
+                    <li><a href="#" class="hover:text-teal-600">New Guests List</a></li>
+                    <li><a href="#" class="hover:text-teal-600">The Team List</a></li>
+                </ul>
+            </div>
+
+            <!-- Useful Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-gray-800">Useful Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-teal-600">Conditions</a></li>
+                    <li><a href="#" class="hover:text-teal-600">Terms of Use</a></li>
+                    <li><a href="#" class="hover:text-teal-600">Our Services</a></li>
+                    <li><a href="#" class="hover:text-teal-600">New Guests List</a></li>
+                    <li><a href="#" class="hover:text-teal-600">The Team List</a></li>
+                </ul>
+            </div>
+
+            <!-- Subscribe -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-gray-800">Subscribe</h3>
+                <form class="flex flex-col space-y-3">
+                    <input type="email" placeholder="Email"
+                        class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500">
+                    <button type="submit"
+                        class="bg-teal-600 text-white py-2 rounded-md hover:bg-teal-700 transition">Subscribe</button>
+                </form>
+                <p class="text-sm text-gray-600 mt-4">
+                    Get the latest updates via email.<br>
+                    Any time you may unsubscribe
+                </p>
+            </div>
+
+        </div>
+    </footer>
+  
+
+      <script src="./script.js"></script>
+</body>
+
+</html>

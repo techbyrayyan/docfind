@@ -1,0 +1,604 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ea49b7d84d.js" crossorigin="anonymous"></script>
+    <link href="./output.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-200">
+
+    <!-- ✅ Navbar (Fixed Top + Linked Pages) -->
+    <nav id="navbar"
+        class="fixed top-11 left-1/2 transform -translate-x-1/2 bg-white shadow-md rounded-xl w-[80%] flex justify-between items-center px-8 py-4 z-50 transition-all duration-500 ease-in-out">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+            <a href="index.html">
+                <img src="/img/Logo Dark.png" alt="Docfind Logo" class="h-10 w-auto" />
+            </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-6 items-center text-[#00464B] font-semibold">
+            <a href="index.html" class="hover:text-[#2E95A0]">Home</a>
+            <a href="doctorlist.html" class="hover:text-[#2E95A0]">Doctors</a>
+            <a href="about.html" class="hover:text-[#2E95A0]">About</a>
+            <a href="services.html" class="hover:text-[#2E95A0]">Services</a>
+            <a href="news and updates.html" class="hover:text-[#2E95A0]">News</a>
+            <a href="contact.html" class="hover:text-[#2E95A0]">Contact</a>
+            <a href="doctorlist.html"
+                class="bg-[#2E95A0] text-white px-5 py-2 rounded hover:bg-[#23737b] transition">Find A Doctor +</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-[#00464B] focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </nav>
+    <!-- ✅ Mobile Menu (also fixed below navbar) -->
+    <div id="mobile-menu"
+        class="hidden md:hidden fixed top-[90px] left-1/2 transform -translate-x-1/2 w-[90%] max-w-6xl bg-white shadow-md rounded-b-xl z-40">
+        <div class="flex flex-col items-start px-6 py-4 gap-4 text-[#00464B] font-semibold">
+            <a href="#" class="hover:text-[#2E95A0]">Home</a>
+            <a href="#" class="hover:text-[#2E95A0]">Doctors</a>
+            <a href="#" class="hover:text-[#2E95A0]">About</a>
+            <a href="#" class="hover:text-[#2E95A0]">Services</a>
+            <a href="#" class="hover:text-[#2E95A0]">News</a>
+            <a href="#" class="hover:text-[#2E95A0]">Contact</a>
+            <a href="#"
+                class="bg-[#2E95A0] text-white px-5 py-2 rounded hover:bg-[#23737b] transition w-full text-center">Find
+                A
+                Doctor +</a>
+        </div>
+
+    </div>
+    <!-- ✅ Header -->
+    <header class="pt-20"
+        style="height: 750px; width: 100%; background-image: url(/img/Mask\ Group\ 16.png); background-position: center; background-repeat: no-repeat; background-size: cover;">
+        <main class="grid place-items-center">
+            <div class="flex justify-between items-center h-fit w-250 mt-25">
+                <div class="">
+                    <h5 class="text-[#2E95A0] font-semibold ">Markets and Resources </h5>
+                    <h1 class="text-[#005963] text-5xl font-bold mt-[30px]  leading-[60px]">Find The Best <br>
+                        Doctor near By
+                        You</h1>
+                    <div class="mt-10">
+                        <a href="" class="text-[13px] px-7 py-2 rounded-sm bg-[#2E95A0] text-white ">Get A Quote </a>
+                        <a href="" class="text-[13px] mx-3 px-7 py-2 rounded-sm border border-[#537174]">Read More </a>
+                    </div>
+                </div>
+                <div class="">
+                    <img class="w-[350px] h-[350px]" src="/img/Mask Group 19.png" alt="">
+                </div>
+            </div>
+        </main>
+    </header>
+
+    <!-- ✅ Section 1 -->
+    <section class="w-full h-[400px] grid place-items-center" style="background-image:url(/img/Group\ 9478.png);">
+        <div class="w-250 h-[300px] ml-2 bg-white p-10 px-20 mt-[-150px]">
+            <div class="flex justify-between items-center">
+                <h1 class="text-[#005963] font-bold text-3xl">Present Tempor Dictom <br> Tellus ut mollestie</h1>
+                <a href="" class="px-7 py-2 rounded-sm bg-[#2E95A0] text-white">Get A Quote <i
+                        class="fa-solid fa-arrow-right mx-3 "></i> </a>
+            </div>
+            <div class="flex justify-center items-center mt-10">
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 shadow-2xl flex justify-center items-center"><img src="/img/034-hospital.png"
+                            alt=""></div>
+                    <div class="">
+                        <h2 class="text-[#005963] font-bold">Therepiya</h2>
+                        <p class="mt-4 text-[#005963]">Lorem, ipsum dolor sit <br> amet consectetur adipisicing elit.
+                            Sed, optio.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="w-10 h-10 shadow-2xl flex justify-center items-center"><img src="/img/034-hospital.png"
+                            alt=""></div>
+                    <div class="">
+                        <h2 class="text-[#005963] font-bold">Dentistry</h2>
+                        <p class="mt-4 text-[#005963]">Lorem, ipsum dolor sit amet <br> consectetur adipisicing elit.
+                            Sed, optio.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class=" w-10 h-10 shadow-2xl flex justify-center items-center"><img src="/img/034-hospital.png"
+                            alt=""></div>
+                    <div class="">
+                        <h2 class="text-[#005963] font-bold">Virosology</h2>
+                        <p class="mt-4 text-[#005963]">Lorem, ipsum dolor sit amet <br>consectetur adipisicing elit.
+                            Sed, optio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-300 flex flex-col sm:flex-row justify-between  px-10 sm:px-20 items-center gap-5 text-center">
+            <div>
+                <img class="h-[50px] w-[50px] mx-auto mb-2" src="/img/001-hospital bed.png" alt="">
+                <h3 class="text-white text-5xl font-bold counter" data-target="3500">0</h3>
+                <p class="text-white">Happy Customers</p>
+            </div>
+            <div>
+                <img class="h-[50px] w-[50px] mx-auto mb-2" src="/img/asset-10.png" alt="">
+                <h3 class="text-white text-5xl font-bold counter" data-target="541">0</h3>
+                <p class="text-white">Project Done</p>
+            </div>
+            <div>
+                <img class="h-[50px] w-[60px] mx-auto mb-2" src="/img/020-heart.png" alt="">
+                <h3 class="text-white text-5xl font-bold counter" data-target="40">0</h3>
+                <p class="text-white">Awards Win</p>
+            </div>
+            <div>
+                <img class="h-[50px] w-[50px] mx-auto mb-2" src="/img/asset-9.png" alt="">
+                <h3 class="text-white text-5xl font-bold counter" data-target="678">0</h3>
+                <p class="text-white">Client Works</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Next Section -->
+    <section class="h-150 w-full bg-white flex justify-center items-center gap-30 ">
+        <div>
+            <img class="h-[400px] w-[400px]" src="/img/Mask Group 18.png" alt="">
+        </div>
+        <div>
+            <h1 class="text-[#005963] text-5xl font-bold">We Provide <br> Essential Services <br> For Your Health</h1>
+            <div class="flex justify-center items-center">
+                <div>
+                    <h5 class="text-[#005963] mt-10 font-bold">Quality Control System</h5>
+                    <p>Lorem ipsum, dolor <br> sit amet consectetur <br> adipisicing elit. Natus,</p>
+                </div>
+                <div class="ml-10">
+                    <h5 class="text-[#005963] mt-10  font-bold">High Professional Staff</h5>
+                    <p>Lorem ipsum, dolor <br> sit amet consectetur <br> adipisicing elit. Natus,</p>
+                </div>
+            </div>
+            <div class="mt-7">
+                <a href="" class="px-7 py-2 rounded-sm bg-[#2E95A0] text-white">Get A Quote <i
+                        class="fa-solid fa-arrow-right"></i> </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Our Team -->
+    <section class="h-140 w-full bg-[#FCF7FF]">
+        <div class="flex justify-center items-center ">
+            <p class="mt-10 text-[#2E95A0]  font-bold">Meet Our Team</p>
+        </div>
+        <div class="flex justify-center items-center ">
+            <h3 class="mt-5 text-[#005963] font-bold text-4xl">Our Creative Team</h3>
+        </div>
+
+        <div class="flex justify-center items-center gap-20 mt-15">
+            <div class="relative">
+                <div class="h-[200px] w-[180px]">
+                    <img src="/img/Mask Group 29.png" alt="">
+                </div>
+                <div class="h-[130px] w-[150px] bg-white absolute left-3.5 top-[170px]">
+                    <h5 class="ml-7 mt-3 text-[15px] text-[#005963]">Mega Nelson</h5>
+                    <p class="ml-5 text-[#005963]">Loareet Gravita</p>
+                    <div class="flex justify-center items-center gap-4 mt-4">
+                        <i class="fa-brands fa-facebook text-[#005963] "></i>
+                        <i class="fa-brands fa-instagram text-[#005963]"></i>
+                        <i class="fa-brands fa-twitter text-[#005963]"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="h-[200px] w-[180px]">
+                    <img src="/img/Mask Group 30.png" alt="">
+                </div>
+                <div class="h-[130px] w-[150px] bg-white absolute left-3.5 top-[170px]">
+                    <h5 class="ml-7 mt-3 text-[15px] text-[#005963]">Doris Griffin</h5>
+                    <p class="ml-5 text-[#005963]">Agdydju Ftriun</p>
+                    <div class="flex justify-center items-center gap-4 mt-4">
+                        <i class="fa-brands fa-facebook text-[#005963] "></i>
+                        <i class="fa-brands fa-instagram text-[#005963]"></i>
+                        <i class="fa-brands fa-twitter text-[#005963]"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="h-[200px] w-[180px]">
+                    <img src="/img/Mask Group 31.png" alt="">
+                </div>
+                <div class="h-[130px] w-[150px] bg-white absolute left-3.5 top-[170px]">
+                    <h5 class="ml-7 mt-3 text-[15px] text-[#005963]">Adam Gilbert</h5>
+                    <p class="ml-5 text-[#005963]">Lirefbg Descrivre</p>
+                    <div class="flex justify-center items-center gap-4 mt-4">
+                        <i class="fa-brands fa-facebook text-[#005963] "></i>
+                        <i class="fa-brands fa-instagram text-[#005963]"></i>
+                        <i class="fa-brands fa-twitter text-[#005963]"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="h-[200px] w-[180px]">
+                    <img src="/img/Mask Group 32.png" alt="">
+                </div>
+                <div class="h-[130px] w-[150px] bg-white absolute left-3.5 top-[170px]">
+                    <h5 class="ml-7 mt-3 text-[15px] text-[#005963]">Steve Cooper</h5>
+                    <p class="ml-5 text-[#005963]">Versatile Nonies</p>
+                    <div class="flex justify-center items-center gap-4 mt-4">
+                        <i class="fa-brands fa-facebook text-[#005963] "></i>
+                        <i class="fa-brands fa-instagram text-[#005963]"></i>
+                        <i class="fa-brands fa-twitter text-[#005963]"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Services Section -->
+    <section class="h-170 w-full" style="background-image: url(/img/Group\ 9478.png);">
+        <div class="flex justify-center items-center ">
+            <p class="mt-10 text-[15px] text-white font-bold">What We Do</p>
+        </div>
+        <div class="flex justify-center items-center ">
+            <h3 class="mt-5 text-white font-bold text-4xl">Services For You</h3>
+        </div>
+        <div class="grid grid-cols-3 grid-rows-2 gap-6 px-30 py-10">
+            <div class="px-10 py-14 bg-white rounded shadow flex justify-center items-center gap-2">
+                <img class="mt-[-30px]" src="/img/034-hospital.png" alt="">
+                <div>
+                    <h3 class="text-[#005963] font-bold">Therapiya</h3>
+                    <p class="mt-2 text-[13px] text-[#005963]">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Atque perferendis ducimus accusantium.</p>
+                </div>
+            </div>
+            <div class="px-10 py-14 bg-white rounded shadow flex justify-center items-center gap-2">
+                <img class=" mt-[-30px]" src="/img/028-clipboard.png" alt="">
+                <div>
+                    <h3 class="text-[#005963] font-bold">Dentistry</h3>
+                    <p class="mt-2 text-[13px] text-[#005963] ">Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Atque perferendis ducimus accusantium.</p>
+                </div>
+            </div>
+            <div class="px-10 py-14 bg-white rounded shadow flex justify-center items-center gap-2">
+                <img class="mt-[-50px]" src="/img/005-medical app.png" alt="">
+                <div>
+                    <h3 class="text-[#005963] font-bold">Virosology</h3>
+                    <p class="mt-2 text-[13px] text-[#005963]">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Atque perferendis ducimus accusantium.</p>
+                </div>
+            </div>
+            <div class="px-10 py-14 bg-white rounded shadow flex justify-center items-center gap-2">
+                <img class="mt-[-50px]" src="/img/asset-3.png" alt="">
+                <div>
+                    <h3 class="text-[#005963] font-bold">Pharmacology</h3>
+                    <p class="mt-2 text-[13px] text-[#005963]">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Atque perferendis ducimus accusantium.</p>
+                </div>
+            </div>
+            <div class="px-10 py-14 bg-white rounded shadow flex justify-center items-center gap-2">
+                <img class="mt-[-50px]" src="/img/asset-4.png" alt="">
+                <div>
+                    <h3 class="text-[#005963] font-bold">Cardology</h3>
+                    <p class="mt-2 text-[13px] text-[#005963]">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Atque perferendis ducimus accusantium.</p>
+                </div>
+            </div>
+            <div class="px-10 py-14 bg-white rounded shadow flex justify-center items-center gap-2">
+                <img class="mt-[-50px]" src="/img/024-stethoscope.png" alt="">
+                <div>
+                    <h3 class="text-[#005963] font-bold">Researches</h3>
+                    <p class="mt-2 text-[13px] text-[#005963]">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Atque perferendis ducimus accusantium.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✅ Testimonial Section -->
+    <section class="h-110 w-full bg-[#FCF7FF]">
+        <div class="flex justify-center items-center ">
+            <p class="mt-10 text-[15px] text-[#2E95A0] font-bold">Clients Testimonial</p>
+        </div>
+        <div class="flex justify-center items-center ">
+            <h3 class="mt-5 text-[#005963] font-bold text-4xl">What Our Clients Say</h3>
+        </div>
+        <div class="flex justify-center items-center gap-10">
+            <div class="bg-white py-10 h-50 w-100 mt-8">
+                <div class="flex justify-center items-center gap-3 relative">
+                    <img src="/img/Mask Group -2.png " class="" height="50px" width="50px" alt="">
+                    <i
+                        class="fa-solid fa-quote-left text-white text-[11px] bg-[#005963] p-1 rounded-full absolute top-[30px] left-[140px]"></i>
+                    <div>
+                        <h4 class=" ml-2 ">Eugene Freeman</h4>
+                        <h6 class="text-gray-700 ml-2 text-[10px] ">Tincident</h6>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+
+                    <p class=" text-[#005963]">Lorem ipsum dolor sit amet <br> consectetur adipisicing <br>elit.
+                        Excepturi, eos?</p>
+                </div>
+            </div>
+
+            <div class="bg-white py-10 h-50 w-100 mt-8">
+                <div class="flex justify-center items-center gap-3 relative">
+                    <img src="/img/Mask Group -3.png " class="" height="50px" width="50px" alt="">
+                    <i
+                        class="fa-solid fa-quote-left text-white text-[11px] ml-3 bg-[#005963] p-1 rounded-full absolute top-[30px] left-[140px]"></i>
+                    <div>
+                        <h4 class=" ml-2 ">kelly colman</h4>
+                        <h6 class="text-gray-700 ml-2 text-[10px] ">nully nec</h6>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <p class=" text-[#005963]">Lorem ipsum dolor sit amet <br> consectetur adipisicing <br>elit.
+                        Excepturi, eos?</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- next section -->
+
+    <section
+        class="flex flex-col md:flex-row justify-center items-center  w-full bg-white rounded-2xl overflow-hidden shadow-md">
+        <!-- Left Image -->
+        <div class=" w-110 h-120 ">
+            <img src="/img/Mask Group 24.png" alt="Doctors" class="w-full h-full object-cover">
+        </div>
+
+        <!-- Right Form -->
+        <div class="w-130 h-120 bg-teal-500 mt-20 text-white p-10 rounded-r-2xl">
+            <h2 class="text-3xl font-bold mb-2">Get In Touch</h2>
+            <p class="text-sm text-gray-100 mb-6">We will be happy to answer your questions.</p>
+
+            <form action="#" class="space-y-4">
+                <!-- Name -->
+                <div class="relative">
+                    <input type="text" placeholder="Name"
+                        class="w-full px-4 py-3 rounded-md bg-transparent border border-white/60 text-white placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-white">
+                    <i class="fa-solid fa-user absolute right-4 top-3.5 text-gray-200"></i>
+                </div>
+
+                <!-- Email -->
+                <div class="relative">
+                    <input type="email" placeholder="Email"
+                        class="w-full px-4 py-3 rounded-md bg-transparent border border-white/60 text-white placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-white">
+                    <i class="fa-solid fa-envelope absolute right-4 top-3.5 text-gray-200"></i>
+                </div>
+
+                <!-- Message -->
+                <div class="relative">
+                    <textarea placeholder="Message" rows="3"
+                        class="w-full px-4 py-3 rounded-md bg-transparent border border-white/60 text-white placeholder-gray-100 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+                    <i class="fa-solid fa-message absolute right-4 top-3.5 text-gray-200"></i>
+                </div>
+
+                <!-- Send Button -->
+                <button type="submit"
+                    class="w-full bg-teal-700 hover:bg-teal-800 py-3 rounded-md font-semibold text-white transition">Send</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!--------------------------------- next section ----------------------------------->
+
+
+    <!-- Insights Section -->
+    <section class="py-20 px-6 md:px-20 bg-white">
+        <!-- Heading -->
+        <div class="text-center mb-12">
+            <p class="text-teal-600 font-semibold uppercase tracking-wide">Latest News</p>
+            <h2 class="text-4xl font-bold text-[#005963] mt-2">Our Insights & Articles</h2>
+        </div>
+
+        <!-- Cards Container -->
+        <div class="grid gap-8 md:grid-cols-3 justify-center">
+
+            <!-- Card 1 -->
+            <div
+                class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-100 hover:shadow-lg transition duration-300">
+                <div class="relative">
+                    <img src="/img/Mask Group 21.png" alt="Article Image" class="w-full h-56 object-cover">
+                    <span
+                        class="absolute bottom-3 left-3 bg-teal-600 text-white text-xs font-semibold px-3 py-1 rounded">28
+                        January, 2020</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-gray-500 text-xs uppercase space-x-4 mb-3">
+                        <span><i class="fa-regular fa-user mr-1"></i>By Admin</span>
+                        <span><i class="fa-solid fa-plane mr-1"></i>Air Transport</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#005963dc] mb-3">Having overweight and depression can</h3>
+                    <a href="#" class="text-teal-600 font-semibold hover:underline">Read More</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-100 hover:shadow-lg transition duration-300">
+                <div class="relative">
+                    <img src="/img/Mask Group 22.png" alt="Article Image" class="w-full h-56 object-cover">
+                    <span
+                        class="absolute bottom-3 left-3 bg-teal-600 text-white text-xs font-semibold px-3 py-1 rounded">28
+                        January, 2020</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center text-gray-500 text-xs uppercase space-x-4 mb-3">
+                        <span><i class="fa-regular fa-user mr-1"></i>By Admin</span>
+                        <span><i class="fa-solid fa-plane mr-1"></i>Air Transport</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#005963dc] mb-3">The connection between post-traumatic</h3>
+                    <a href="#" class="text-teal-600 font-semibold hover:underline">Read More</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-white shadow-md rounded-lg overflow-hidden border border-gray-100 hover:shadow-lg transition duration-300">
+                <div class="relative">
+                    <img src="/img/Mask Group 23.png" alt="Article Image" class="w-full h-56 object-cover">
+                    <span
+                        class="absolute bottom-3 left-3 bg-teal-600 text-white text-xs font-semibold px-3 py-1 rounded">28
+                        January, 2020</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center te
+                    xt-gray-500 text-xs uppercase space-x-4 mb-3">
+                        <span><i class="fa-regular fa-user mr-1"></i>By Admin</span>
+                        <span><i class="fa-solid fa-plane mr-1"></i>Air Transport</span>
+                    </div>
+                    <h3 class="text-lg font-semibold text-[#005963dc] mb-3">Adjusting to life with a spinal cord injury
+                    </h3>
+                    <a href="#" class="text-teal-600 font-semibold hover:underline">Read More</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-------------------------------- next section ------------------------------------>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 md:px-16 bg-[#f9f6f8]">
+        <main class="flex justify-center items-center mt-[-100px]">
+            <section
+                class="w-[90%] md:w-[80%] lg:w-[70%] bg-white shadow-md rounded-2xl flex flex-col md:flex-row justify-center items-center px-8 py-5 md:py-6 space-y-6 md:space-y-0 md:divide-x divide-gray-200">
+
+                <!-- Address -->
+                <div class="flex items-center gap-3 md:w-1/3 justify-center md:justify-start px-4">
+                    <div class="text-teal-600 text-2xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-600 text-sm">Our Address</p>
+                        <h4 class="font-semibold text-gray-800 text-[15px]">Drive Chicago, IL 60607</h4>
+                    </div>
+                </div>
+
+                <!-- Call -->
+                <div class="flex items-center gap-3 md:w-1/3 justify-center md:justify-start px-4">
+                    <div class="text-teal-600 text-2xl">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-600 text-sm">Call Us</p>
+                        <h4 class="font-semibold text-gray-800 text-[15px]">360-779-2228</h4>
+                    </div>
+                </div>
+
+                <!-- Mail -->
+                <div class="flex items-center gap-3 md:w-1/3 justify-center md:justify-start px-4">
+                    <div class="text-teal-600 text-2xl">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-600 text-sm">Our Mail</p>
+                        <h4 class="font-semibold text-gray-800 text-[15px]">yourname@mail.com</h4>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+        <div class="max-w-7xl mt-10 mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+
+            <!-- Logo + Text -->
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <img src="/img/Logo Dark.png" alt="">
+                    <h2 class="text-2xl font-bold text-teal-700"></h2>
+                </div>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Lorem ipsum dolor sit amet, consect etuer adipiscing elit, sed diam nonu mmy nibh euis.
+                </p>
+
+                <!-- Social Icons -->
+                <div class="flex space-x-3">
+                    <a href="#"
+                        class="bg-teal-600 text-white w-9 h-9 flex items-center justify-center rounded-full hover:bg-teal-700 transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#"
+                        class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#"
+                        class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#"
+                        class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#"
+                        class="bg-gray-200 text-gray-600 w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-300 transition">
+                        <i class="fab fa-pinterest"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-gray-800">Services</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-teal-600">Conditions</a></li>
+                    <li><a href="#" class="hover:text-teal-600">Terms of Use</a></li>
+                    <li><a href="#" class="hover:text-teal-600">Our Services</a></li>
+                    <li><a href="#" class="hover:text-teal-600">New Guests List</a></li>
+                    <li><a href="#" class="hover:text-teal-600">The Team List</a></li>
+                </ul>
+            </div>
+
+            <!-- Useful Links -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-gray-800">Useful Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-teal-600">Conditions</a></li>
+                    <li><a href="#" class="hover:text-teal-600">Terms of Use</a></li>
+                    <li><a href="#" class="hover:text-teal-600">Our Services</a></li>
+                    <li><a href="#" class="hover:text-teal-600">New Guests List</a></li>
+                    <li><a href="#" class="hover:text-teal-600">The Team List</a></li>
+                </ul>
+            </div>
+
+            <!-- Subscribe -->
+            <div>
+                <h3 class="text-lg font-semibold mb-4 text-gray-800">Subscribe</h3>
+                <form class="flex flex-col space-y-3">
+                    <input type="email" placeholder="Email"
+                        class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500">
+                    <button type="submit"
+                        class="bg-teal-600 text-white py-2 rounded-md hover:bg-teal-700 transition">Subscribe</button>
+                </form>
+                <p class="text-sm text-gray-600 mt-4">
+                    Get the latest updates via email.<br>
+                    Any time you may unsubscribe
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

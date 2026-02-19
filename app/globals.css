@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-outfit);
+
+  --spacing-15: 3.75rem;
+  --spacing-25: 6.25rem;
+  --spacing-30: 7.5rem;
+  --spacing-50: 12.5rem;
+  --spacing-100: 25rem;
+  --spacing-110: 27.5rem;
+  --spacing-120: 30rem;
+  --spacing-130: 32.5rem;
+  --spacing-140: 35rem;
+  --spacing-150: 37.5rem;
+  --spacing-170: 42.5rem;
+  --spacing-220: 55rem;
+  --spacing-250: 62.5rem;
+  --spacing-300: 75rem;
+}
+
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
