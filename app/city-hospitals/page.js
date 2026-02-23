@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import HospitalCard from "@/components/HospitalCard";
-import { cityHospitalsData, cities } from "@/app/hospital-data/page";
+import { cityHospitalsData, cities } from "@/data/cityHospitalsData";
 
 export default function CityHospitalsPage() {
     const [hospitalsData, setHospitalsData] = useState(cityHospitalsData);
@@ -13,7 +13,7 @@ export default function CityHospitalsPage() {
 
     useEffect(() => {
         // Load synchronized data (handles merges with new code)
-        const { getSyncedHospitals } = require("@/app/hospital-data/page");
+        const { getSyncedHospitals } = require("@/data/cityHospitalsData");
         setHospitalsData(getSyncedHospitals());
 
         // Listen for real-time updates

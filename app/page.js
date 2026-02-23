@@ -7,7 +7,7 @@ import Counter from "../components/Counter";
 import TeamSection from "../components/TeamSection";
 import TestimonialSection from "../components/TestimonialSection";
 import ServiceCard from "../components/ServiceCard";
-import { cityHospitalsData } from "./hospital-data/page";
+import { cityHospitalsData } from "@/data/cityHospitalsData";
 
 const SERVICES = [
   { img: "/img/034-hospital.png", title: "Therapiya", description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque perferendis ducimus accusantium.", imgClassName: "mt-[-30px]" },
@@ -37,7 +37,7 @@ export default function Home() {
     setIsClient(true);
 
     // Import master data directly
-    const { cityHospitalsData } = require("./hospital-data/page");
+    const { cityHospitalsData } = require("@/data/cityHospitalsData");
 
     // FORCE RESET: Always use the master data from the file to ensure the UI matches the code.
     // This overwrites any previous local edits (like "Doctor Hospital" vs "Mayo Hospital").

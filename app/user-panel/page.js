@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function UserPanel() {
@@ -82,14 +83,27 @@ export default function UserPanel() {
     ];
 
     return (
-        <div className="min-h-screen bg-[#F3F4F6] pt-28 pb-10 px-4 md:px-6">
-            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6">
+        <div className="min-h-screen bg-[#F3F4F6] pb-10 px-4 md:px-6 relative">
+            {/* Page Logo - Top Left */}
+            <div className="absolute top-10 left-10 z-10">
+                <Link href="/">
+                    <Image
+                        src="/img/Logo Dark.png"
+                        alt="Docfind Logo"
+                        width={150}
+                        height={40}
+                        className="h-10 md:h-12 w-auto"
+                    />
+                </Link>
+            </div>
+            <div className="pt-28"></div>
+            <div className="max-w-7xl mx-auto flex  flex-col lg:flex-row gap-6">
 
                 {/* Sidebar */}
                 <aside className="w-full lg:w-64 flex flex-col gap-4">
                     {/* Profile Card */}
                     <div className="bg-white mt-10 rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col items-center text-center relative overflow-hidden">
-                        <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-br from-[#2E95A0] to-[#00464B]"></div>
+                        <div className="absolute top-0 left-0 w-full h-20 bg-linear-to-br from-[#2E95A0] to-[#00464B]"></div>
                         <div className="relative z-10 mt-6 mb-3">
                             <div className="w-18 h-18 mx-auto">
                                 <div className="w-[72px] h-[72px] rounded-full bg-[#E0F2F1] flex items-center justify-center border-[3px] border-white shadow-lg overflow-hidden mx-auto">
@@ -103,31 +117,31 @@ export default function UserPanel() {
                                 </div>
                             </div>
                         </div>
-                        <h2 className="text-sm font-bold text-[#00464B] relative z-10">{user.name}</h2>
-                        <p className="text-[10px] text-gray-400 mb-3 relative z-10">{user.email}</p>
+                        <h2 className="text-base font-bold text-[#00464B] relative z-10">{user.name}</h2>
+                        <p className="text-xs text-gray-400 mb-3 relative z-10">{user.email}</p>
 
                         <div className="w-full h-px bg-gray-100 mb-3"></div>
 
                         <div className="flex gap-6 w-full justify-center">
                             <div className="text-center">
                                 <p className="text-sm font-bold text-[#2E95A0]">{stats.appointments}</p>
-                                <p className="text-[8px] uppercase text-gray-400 font-bold tracking-wider">Bookings</p>
+                                <p className="text-[10px] uppercase text-gray-400 font-bold tracking-wider">Bookings</p>
                             </div>
                             <div className="w-px h-7 bg-gray-100"></div>
                             <div className="text-center">
                                 <p className="text-sm font-bold text-[#2E95A0]">{stats.likes}</p>
-                                <p className="text-[8px] uppercase text-gray-400 font-bold tracking-wider">Favorites</p>
+                                <p className="text-[10px] uppercase text-gray-400 font-bold tracking-wider">Favorites</p>
                             </div>
                             <div className="w-px h-7 bg-gray-100"></div>
                             <div className="text-center">
                                 <p className="text-sm font-bold text-[#2E95A0]">{stats.healthScore}%</p>
-                                <p className="text-[8px] uppercase text-gray-400 font-bold tracking-wider">Health</p>
+                                <p className="text-[10px] uppercase text-gray-400 font-bold tracking-wider">Health</p>
                             </div>
                         </div>
 
                         <Link
                             href="/edit-profile"
-                            className="mt-3 w-full py-2 rounded-xl border border-[#2E95A0]/20 text-[10px] font-bold text-[#2E95A0] hover:bg-[#2E95A0] hover:text-white transition-all duration-300 text-center block"
+                            className="mt-3 w-full py-2 rounded-xl border border-[#2E95A0]/20 text-xs font-bold text-[#2E95A0] hover:bg-[#2E95A0] hover:text-white transition-all duration-300 text-center block"
                         >
                             <i className="fa-solid fa-pen mr-1"></i> Edit Profile
                         </Link>
@@ -141,12 +155,12 @@ export default function UserPanel() {
                                 href={item.href || "#"}
                                 onClick={() => !item.href && setActiveTab(item.id)}
                                 className={`flex items-center gap-3 px-4 py-3 transition-all duration-200 border-l-[3px] ${activeTab === item.id
-                                        ? "bg-[#F8FCFC] border-[#2E95A0] text-[#2E95A0]"
-                                        : "border-transparent text-gray-500 hover:bg-gray-50 hover:text-[#2E95A0]"
+                                    ? "bg-[#F8FCFC] border-[#2E95A0] text-[#2E95A0]"
+                                    : "border-transparent text-gray-500 hover:bg-gray-50 hover:text-[#2E95A0]"
                                     }`}
                             >
                                 <i className={`${item.icon} text-xs w-5`}></i>
-                                <span className="text-[11px] font-semibold">{item.label}</span>
+                                <span className="text-sm font-semibold">{item.label}</span>
                             </Link>
                         ))}
                         <button
@@ -157,21 +171,21 @@ export default function UserPanel() {
                             className="w-full flex items-center gap-3 px-4 py-3 text-red-400 hover:bg-red-50 hover:text-red-500 transition-all duration-200 border-l-[3px] border-transparent"
                         >
                             <i className="fa-solid fa-right-from-bracket text-xs w-5"></i>
-                            <span className="text-[11px] font-semibold">Logout</span>
+                            <span className="text-sm font-semibold">Logout</span>
                         </button>
                     </nav>
 
                     {/* Health Score Card */}
-                    <div className="bg-gradient-to-br from-[#00464B] to-[#2E95A0] rounded-2xl p-4 text-white relative overflow-hidden shadow-md">
+                    <div className="bg-linear-to-br from-[#00464B] to-[#2E95A0] rounded-2xl p-4 text-white relative overflow-hidden shadow-md">
                         <div className="absolute top-0 right-0 opacity-10 scale-125">
                             <i className="fa-solid fa-heart-pulse text-5xl p-3"></i>
                         </div>
                         <div className="relative z-10">
-                            <p className="text-[9px] text-teal-200 font-bold uppercase tracking-widest mb-2">Health Score</p>
+                            <p className="text-xs text-teal-200 font-bold uppercase tracking-widest mb-2">Health Score</p>
                             <div className="flex items-end gap-2 mb-2">
                                 <span className="text-3xl font-black">{stats.healthScore}%</span>
-                                <span className="text-[9px] text-green-300 font-bold mb-1">
-                                    <i className="fa-solid fa-arrow-up text-[7px] mr-0.5"></i>Good
+                                <span className="text-xs text-green-300 font-bold mb-1">
+                                    <i className="fa-solid fa-arrow-up text-[10px] mr-0.5"></i>Good
                                 </span>
                             </div>
                             <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
@@ -192,15 +206,15 @@ export default function UserPanel() {
                         <div className="absolute top-0 right-0 w-48 h-48 bg-[#2E95A0] opacity-[0.03] rounded-full -mr-16 -mt-16"></div>
                         <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                             <div>
-                                <p className="text-[10px] text-[#2E95A0] font-bold uppercase tracking-wider mb-1">{greeting}</p>
-                                <h1 className="text-xl font-black text-[#00464B] tracking-tight">{user.name} 👋</h1>
-                                <p className="text-[11px] text-gray-500 mt-1 max-w-md leading-relaxed">
+                                <p className="text-xs text-[#2E95A0] font-bold uppercase tracking-wider mb-1">{greeting}</p>
+                                <h1 className="text-2xl font-black text-[#00464B] tracking-tight">{user.name} 👋</h1>
+                                <p className="text-sm text-gray-500 mt-1 max-w-md leading-relaxed">
                                     Track your health journey, manage appointments, and stay connected with your healthcare providers.
                                 </p>
                             </div>
                             <Link
                                 href="/book-appointment"
-                                className="bg-[#2E95A0] text-white px-4 py-2.5 rounded-xl text-[11px] font-bold hover:bg-[#23848f] hover:shadow-lg transition-all transform hover:-translate-y-0.5 whitespace-nowrap"
+                                className="bg-[#2E95A0] text-white px-5 py-3 rounded-xl text-sm font-bold hover:bg-[#23848f] hover:shadow-lg transition-all transform hover:-translate-y-0.5 whitespace-nowrap"
                             >
                                 <i className="fa-solid fa-plus mr-1.5"></i>New Appointment
                             </Link>
@@ -214,11 +228,11 @@ export default function UserPanel() {
                                 <div className="w-9 h-9 rounded-lg bg-teal-50 flex items-center justify-center group-hover:scale-110 transition-transform">
                                     <i className="fa-solid fa-calendar-days text-xs text-[#2E95A0]"></i>
                                 </div>
-                                <span className="text-[9px] font-bold text-green-500 bg-green-50 px-1.5 py-0.5 rounded">
+                                <span className="text-[10px] font-bold text-green-500 bg-green-50 px-1.5 py-0.5 rounded">
                                     <i className="fa-solid fa-arrow-up text-[8px] mr-0.5"></i>Active
                                 </span>
                             </div>
-                            <p className="text-[10px] text-gray-400 font-medium uppercase tracking-wider">Appointments</p>
+                            <p className="text-xs text-gray-400 font-medium uppercase tracking-wider">Appointments</p>
                             <h3 className="text-xl font-bold text-[#00464B] mt-0.5">{stats.appointments}</h3>
                         </div>
 
@@ -227,9 +241,9 @@ export default function UserPanel() {
                                 <div className="w-9 h-9 rounded-lg bg-red-50 flex items-center justify-center group-hover:scale-110 transition-transform">
                                     <i className="fa-solid fa-heart text-xs text-[#2E95A0]"></i>
                                 </div>
-                                <span className="text-[9px] font-bold text-[#2E95A0] bg-teal-50 px-1.5 py-0.5 rounded">Total</span>
+                                <span className="text-[10px] font-bold text-[#2E95A0] bg-teal-50 px-1.5 py-0.5 rounded">Total</span>
                             </div>
-                            <p className="text-[10px] text-gray-400 font-medium uppercase tracking-wider">Favorites</p>
+                            <p className="text-xs text-gray-400 font-medium uppercase tracking-wider">Favorites</p>
                             <h3 className="text-xl font-bold text-[#00464B] mt-0.5">{stats.likes}</h3>
                         </div>
 
@@ -238,9 +252,9 @@ export default function UserPanel() {
                                 <div className="w-9 h-9 rounded-lg bg-yellow-50 flex items-center justify-center group-hover:scale-110 transition-transform">
                                     <i className="fa-solid fa-comment-medical text-xs text-[#2E95A0]"></i>
                                 </div>
-                                <span className="text-[9px] font-bold text-[#2E95A0] bg-teal-50 px-1.5 py-0.5 rounded">2 New</span>
+                                <span className="text-[10px] font-bold text-[#2E95A0] bg-teal-50 px-1.5 py-0.5 rounded">2 New</span>
                             </div>
-                            <p className="text-[10px] text-gray-400 font-medium uppercase tracking-wider">Messages</p>
+                            <p className="text-xs text-gray-400 font-medium uppercase tracking-wider">Messages</p>
                             <h3 className="text-xl font-bold text-[#00464B] mt-0.5">{stats.messages}</h3>
                         </div>
 
@@ -249,9 +263,9 @@ export default function UserPanel() {
                                 <div className="w-9 h-9 rounded-lg bg-green-50 flex items-center justify-center group-hover:scale-110 transition-transform">
                                     <i className="fa-solid fa-stethoscope text-xs text-[#2E95A0]"></i>
                                 </div>
-                                <span className="text-[9px] font-bold text-green-500 bg-green-50 px-1.5 py-0.5 rounded">Good</span>
+                                <span className="text-[10px] font-bold text-green-500 bg-green-50 px-1.5 py-0.5 rounded">Good</span>
                             </div>
-                            <p className="text-[10px] text-gray-400 font-medium uppercase tracking-wider">Health Score</p>
+                            <p className="text-xs text-gray-400 font-medium uppercase tracking-wider">Health Score</p>
                             <h3 className="text-xl font-bold text-[#00464B] mt-0.5">{stats.healthScore}%</h3>
                         </div>
                     </div>
@@ -264,12 +278,12 @@ export default function UserPanel() {
                                 <Link
                                     key={idx}
                                     href={action.href}
-                                    className={`bg-gradient-to-br ${action.color} text-white p-3 rounded-xl flex items-center gap-2.5 hover:opacity-90 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200`}
+                                    className={`bg-linear-to-br ${action.color} text-white p-3 rounded-xl flex items-center gap-2.5 hover:opacity-90 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200`}
                                 >
                                     <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
                                         <i className={`${action.icon} text-xs`}></i>
                                     </div>
-                                    <span className="text-[11px] font-semibold">{action.label}</span>
+                                    <span className="text-xs font-semibold">{action.label}</span>
                                 </Link>
                             ))}
                         </div>
@@ -279,8 +293,8 @@ export default function UserPanel() {
                         {/* Recent Appointments */}
                         <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
                             <div className="p-4 border-b border-gray-50 flex justify-between items-center bg-[#F8FCFC]">
-                                <h3 className="text-sm font-bold text-[#00464B]">Recent Appointments</h3>
-                                <Link href="/history" className="text-[10px] font-bold text-[#2E95A0] hover:underline">View All →</Link>
+                                <h3 className="text-base font-bold text-[#00464B]">Recent Appointments</h3>
+                                <Link href="/history" className="text-xs font-bold text-[#2E95A0] hover:underline">View All →</Link>
                             </div>
                             <div>
                                 {recentAppointments.length > 0 ? (
@@ -292,11 +306,11 @@ export default function UserPanel() {
                                                         <i className="fa-solid fa-user-doctor text-xs"></i>
                                                     </div>
                                                     <div>
-                                                        <h4 className="text-[11px] font-bold text-gray-800">{appt.doctor}</h4>
-                                                        <p className="text-[9px] text-gray-400">{appt.appointmentDate} • {appt.appointmentTime}</p>
+                                                        <h4 className="text-sm font-bold text-gray-800">{appt.doctor}</h4>
+                                                        <p className="text-xs text-gray-400">{appt.appointmentDate} • {appt.appointmentTime}</p>
                                                     </div>
                                                 </div>
-                                                <span className={`text-[9px] font-bold uppercase px-2 py-0.5 rounded ${appt.status === "Confirmed" ? "bg-green-50 text-green-600" : "bg-teal-50 text-teal-600"
+                                                <span className={`text-xs font-bold uppercase px-2 py-0.5 rounded ${appt.status === "Confirmed" ? "bg-green-50 text-green-600" : "bg-teal-50 text-teal-600"
                                                     }`}>
                                                     {appt.status}
                                                 </span>
@@ -316,20 +330,20 @@ export default function UserPanel() {
                         {/* Health Insights */}
                         <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
                             <div className="p-4 border-b border-gray-50 flex justify-between items-center">
-                                <h3 className="text-sm font-bold text-[#00464B]">Health Insights</h3>
-                                <span className="text-[9px] bg-teal-50 text-[#2E95A0] px-1.5 py-0.5 rounded font-bold">
-                                    <i className="fa-solid fa-lightbulb text-[8px] mr-0.5"></i> Tips
+                                <h3 className="text-base font-bold text-[#00464B]">Health Insights</h3>
+                                <span className="text-xs bg-teal-50 text-[#2E95A0] px-1.5 py-0.5 rounded font-bold">
+                                    <i className="fa-solid fa-lightbulb text-xs mr-0.5"></i> Tips
                                 </span>
                             </div>
                             <div className="p-3 flex flex-col gap-2">
                                 {healthTips.map((tip, idx) => (
                                     <div key={idx} className={`p-3 rounded-lg ${tip.color.split(" ")[0]} border-l-[3px] ${tip.color.split(" ")[1]} flex items-start gap-3`}>
-                                        <div className={`w-7 h-7 rounded-lg flex items-center justify-center flex-shrink-0 ${tip.color.split(" ")[0]}`}>
-                                            <i className={`${tip.icon} text-[10px] ${tip.color.split(" ")[2]}`}></i>
+                                        <div className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 ${tip.color.split(" ")[0]}`}>
+                                            <i className={`${tip.icon} text-xs ${tip.color.split(" ")[2]}`}></i>
                                         </div>
                                         <div>
-                                            <h5 className="text-[11px] font-bold text-[#00464B] mb-0.5">{tip.title}</h5>
-                                            <p className="text-[10px] text-gray-500 leading-relaxed">{tip.desc}</p>
+                                            <h5 className="text-sm font-bold text-[#00464B] mb-0.5">{tip.title}</h5>
+                                            <p className="text-xs text-gray-500 leading-relaxed">{tip.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -346,39 +360,39 @@ export default function UserPanel() {
                             </div>
                             <div className="p-4 flex flex-col gap-3">
                                 <div className="flex items-center gap-3 p-2.5 rounded-lg bg-gray-50/50">
-                                    <div className="w-7 h-7 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0">
+                                    <div className="w-7 h-7 rounded-lg bg-teal-50 flex items-center justify-center shrink-0">
                                         <i className="fa-solid fa-user text-[10px] text-[#2E95A0]"></i>
                                     </div>
                                     <div>
-                                        <p className="text-[9px] text-gray-400 font-medium">Full Name</p>
-                                        <p className="text-[11px] font-semibold text-gray-700">{user.name}</p>
+                                        <p className="text-[10px] text-gray-400 font-medium">Full Name</p>
+                                        <p className="text-sm font-semibold text-gray-700">{user.name}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-3 p-2.5 rounded-lg bg-gray-50/50">
-                                    <div className="w-7 h-7 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0">
-                                        <i className="fa-solid fa-envelope text-[10px] text-[#2E95A0]"></i>
+                                    <div className="w-7 h-7 rounded-lg bg-teal-50 flex items-center justify-center shrink-0">
+                                        <i className="fa-solid fa-envelope text-xs text-[#2E95A0]"></i>
                                     </div>
                                     <div className="min-w-0">
-                                        <p className="text-[9px] text-gray-400 font-medium">Email</p>
-                                        <p className="text-[11px] font-semibold text-gray-700 truncate">{user.email}</p>
+                                        <p className="text-[10px] text-gray-400 font-medium">Email</p>
+                                        <p className="text-sm font-semibold text-gray-700 truncate">{user.email}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-3 p-2.5 rounded-lg bg-gray-50/50">
-                                    <div className="w-7 h-7 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0">
-                                        <i className="fa-solid fa-phone text-[10px] text-[#2E95A0]"></i>
+                                    <div className="w-7 h-7 rounded-lg bg-teal-50 flex items-center justify-center shrink-0">
+                                        <i className="fa-solid fa-phone text-xs text-[#2E95A0]"></i>
                                     </div>
                                     <div>
-                                        <p className="text-[9px] text-gray-400 font-medium">Phone</p>
-                                        <p className="text-[11px] font-semibold text-gray-700">{user.phone}</p>
+                                        <p className="text-[10px] text-gray-400 font-medium">Phone</p>
+                                        <p className="text-sm font-semibold text-gray-700">{user.phone}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-3 p-2.5 rounded-lg bg-gray-50/50">
-                                    <div className="w-7 h-7 rounded-lg bg-teal-50 flex items-center justify-center flex-shrink-0">
-                                        <i className="fa-solid fa-location-dot text-[10px] text-[#2E95A0]"></i>
+                                    <div className="w-7 h-7 rounded-lg bg-teal-50 flex items-center justify-center shrink-0">
+                                        <i className="fa-solid fa-location-dot text-xs text-[#2E95A0]"></i>
                                     </div>
                                     <div className="min-w-0">
-                                        <p className="text-[9px] text-gray-400 font-medium">Address</p>
-                                        <p className="text-[11px] font-semibold text-gray-700 truncate">{user.address}</p>
+                                        <p className="text-[10px] text-gray-400 font-medium">Address</p>
+                                        <p className="text-sm font-semibold text-gray-700 truncate">{user.address}</p>
                                     </div>
                                 </div>
                                 <Link
@@ -399,37 +413,37 @@ export default function UserPanel() {
                                 <Link href="/history" className="p-4 rounded-xl bg-gray-50/50 hover:bg-teal-50/50 border border-gray-100 hover:border-[#2E95A0]/20 transition-all group">
                                     <div className="flex items-center gap-2 mb-2">
                                         <i className="fa-solid fa-clock-rotate-left text-xs text-[#2E95A0]"></i>
-                                        <span className="text-[10px] font-bold text-[#00464B]">Booking History</span>
+                                        <span className="text-xs font-bold text-[#00464B]">Booking History</span>
                                     </div>
-                                    <p className="text-[9px] text-gray-400 leading-relaxed">View all your past and upcoming appointments</p>
-                                    <span className="text-[9px] text-[#2E95A0] font-bold mt-2 inline-block group-hover:translate-x-0.5 transition-transform">View →</span>
+                                    <p className="text-xs text-gray-400 leading-relaxed">View all your past and upcoming appointments</p>
+                                    <span className="text-xs text-[#2E95A0] font-bold mt-2 inline-block group-hover:translate-x-0.5 transition-transform">View →</span>
                                 </Link>
 
                                 <Link href="/likes" className="p-4 rounded-xl bg-gray-50/50 hover:bg-teal-50/50 border border-gray-100 hover:border-[#2E95A0]/20 transition-all group">
                                     <div className="flex items-center gap-2 mb-2">
                                         <i className="fa-solid fa-heart text-xs text-[#2E95A0]"></i>
-                                        <span className="text-[10px] font-bold text-[#00464B]">Saved Doctors</span>
+                                        <span className="text-xs font-bold text-[#00464B]">Saved Doctors</span>
                                     </div>
-                                    <p className="text-[9px] text-gray-400 leading-relaxed">Quickly access your favorite healthcare providers</p>
-                                    <span className="text-[9px] text-[#2E95A0] font-bold mt-2 inline-block group-hover:translate-x-0.5 transition-transform">View →</span>
+                                    <p className="text-xs text-gray-400 leading-relaxed">Quickly access your favorite healthcare providers</p>
+                                    <span className="text-xs text-[#2E95A0] font-bold mt-2 inline-block group-hover:translate-x-0.5 transition-transform">View →</span>
                                 </Link>
 
                                 <Link href="/medicine" className="p-4 rounded-xl bg-gray-50/50 hover:bg-teal-50/50 border border-gray-100 hover:border-[#2E95A0]/20 transition-all group">
                                     <div className="flex items-center gap-2 mb-2">
                                         <i className="fa-solid fa-capsules text-xs text-[#2E95A0]"></i>
-                                        <span className="text-[10px] font-bold text-[#00464B]">Medicine Store</span>
+                                        <span className="text-xs font-bold text-[#00464B]">Medicine Store</span>
                                     </div>
-                                    <p className="text-[9px] text-gray-400 leading-relaxed">Browse and find medicines for your needs</p>
-                                    <span className="text-[9px] text-[#2E95A0] font-bold mt-2 inline-block group-hover:translate-x-0.5 transition-transform">Browse →</span>
+                                    <p className="text-xs text-gray-400 leading-relaxed">Browse and find medicines for your needs</p>
+                                    <span className="text-xs text-[#2E95A0] font-bold mt-2 inline-block group-hover:translate-x-0.5 transition-transform">Browse →</span>
                                 </Link>
 
                                 <Link href="/news" className="p-4 rounded-xl bg-gray-50/50 hover:bg-teal-50/50 border border-gray-100 hover:border-[#2E95A0]/20 transition-all group">
                                     <div className="flex items-center gap-2 mb-2">
                                         <i className="fa-solid fa-newspaper text-xs text-[#2E95A0]"></i>
-                                        <span className="text-[10px] font-bold text-[#00464B]">Health News</span>
+                                        <span className="text-xs font-bold text-[#00464B]">Health News</span>
                                     </div>
-                                    <p className="text-[9px] text-gray-400 leading-relaxed">Stay updated with the latest health news</p>
-                                    <span className="text-[9px] text-[#2E95A0] font-bold mt-2 inline-block group-hover:translate-x-0.5 transition-transform">Read →</span>
+                                    <p className="text-xs text-gray-400 leading-relaxed">Stay updated with the latest health news</p>
+                                    <span className="text-xs text-[#2E95A0] font-bold mt-2 inline-block group-hover:translate-x-0.5 transition-transform">Read →</span>
                                 </Link>
                             </div>
                         </div>

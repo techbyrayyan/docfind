@@ -2,8 +2,9 @@
 
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { cityHospitalsData as defaultCityHospitalsData, getSyncedHospitals } from "../hospital-data/page";
+import { cityHospitalsData as defaultCityHospitalsData, getSyncedHospitals } from "@/data/cityHospitalsData";
 import HospitalCard from "@/components/HospitalCard";
 
 export default function AdminPanel() {
@@ -647,11 +648,24 @@ export default function AdminPanel() {
     };
 
     return (
-        <div className="min-h-screen bg-[#F3F4F6] pt-28 pb-10 px-4 md:px-6">
+        <div className="min-h-screen bg-[#F3F4F6] pb-10 px-4 md:px-6 relative">
+            {/* Page Logo - Top Left */}
+            <div className="absolute top-10 left-10 z-10">
+                <Link href="/">
+                    <Image
+                        src="/img/Logo Dark.png"
+                        alt="Docfind Logo"
+                        width={150}
+                        height={40}
+                        className="h-10 md:h-12 w-auto"
+                    />
+                </Link>
+            </div>
+            <div className="pt-28"></div>
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6">
                 {/* Sidebar */}
                 <aside className="w-full lg:w-60 flex flex-col gap-4">
-                    <div className="bg-[#00464B] rounded-2xl p-6 shadow-xl text-white sticky top-28 overflow-hidden mt-10">
+                    <div className="bg-[#00464B] rounded-2xl p-6 shadow-xl text-white overflow-hidden mt-10">
                         <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full -mr-12 -mt-12"></div>
 
                         {/* Sidebar Header */}
