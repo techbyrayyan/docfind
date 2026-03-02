@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { cityHospitalsData as defaultCityHospitalsData, getSyncedHospitals } from "@/data/cityHospitalsData";
+import { cityHospitalsData as defaultCityHospitalsData, getSyncedHospitals } from "@/app/data/cityHospitalsData";
 import HospitalCard from "@/components/HospitalCard";
 
 export default function AdminPanel() {

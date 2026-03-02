@@ -1,7 +1,7 @@
 "use client";
 
 import { useParams, useRouter } from "next/navigation";
-import { cityHospitalsData } from "@/data/cityHospitalsData";
+import { cityHospitalsData, getSyncedHospitals } from "@/app/data/cityHospitalsData";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
@@ -14,7 +14,6 @@ export default function HospitalDetailPage() {
 
     useEffect(() => {
         // Load synchronized data
-        const { getSyncedHospitals } = require("@/data/cityHospitalsData");
         setHospitalsData(getSyncedHospitals());
 
         // Listen for real-time updates
