@@ -189,13 +189,13 @@ export default function Navbar() {
                                         <div className="flex items-center gap-3">
                                             <Link
                                                 href="/login"
-                                                className="text-[#00464B] hover:text-[#2E95A0] transition-colors"
+                                                className="text-[#00464B] hover:text-[#2E95A0] transition-colors whitespace-nowrap"
                                             >
                                                 Sign In
                                             </Link>
                                             <Link
                                                 href="/signup-email"
-                                                className="bg-[#00464B] text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-[#003333] transition-all"
+                                                className="bg-[#00464B] text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-[#003333] transition-all whitespace-nowrap"
                                             >
                                                 Sign Up
                                             </Link>

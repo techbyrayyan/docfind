@@ -119,7 +119,7 @@ export default function Likes() {
                                     strokeLinecap="round"
                                     strokeLinejoin="round"
                                     d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3zm0 0c4.418 0 8 2.239 8 5v3H4v-3c0-2.761 3.582-5 8-5z"
-                                />
+                             />
                             </svg>
                             <span> New Shalimar Colony, Lahore</span>
                         </div>
