@@ -1,14 +1,26 @@
 "use client";
 
+
 import React, { useEffect, useState } from "react";
 import { cityHospitalsData, getSyncedHospitals } from "@/app/data/cityHospitalsData";
+
+
+import React, { useEffect, useState } from "react";
+import { cityHospitalsData, getSyncedHospitals } from "@/app/data/cityHospitalsData";
+
 
 export default function HospitalDataPage() {
     const [hospitals, setHospitals] = useState(cityHospitalsData);
     const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
+
         setIsClient(true);
+
+        setMounted(true);
+        const data = getSyncedHospitals();
+        if (data) setHospitals(data);
+
 
         const data = getSyncedHospitals();
         if (data) setHospitals(data);
@@ -27,8 +39,13 @@ export default function HospitalDataPage() {
         return () => window.removeEventListener("storage", handleUpdate);
     }, []);
 
+
     if (!isClient) {
         return <div className="min-h-screen bg-white" />;
+
+    if (!mounted) {
+        return <div className="min-h-screen bg-slate-50" />;
+
     }
 
     return (
@@ -57,6 +74,7 @@ export default function HospitalDataPage() {
                                     </p>
                                 </div>
 
+
                                 <div className="bg-teal-50 px-6 py-4 rounded-2xl border border-teal-100">
                                     <p className="text-xs font-bold text-[#2E95A0]">Hospitals</p>
                                     <p className="text-3xl font-black text-[#00464B]">
@@ -71,6 +89,19 @@ export default function HospitalDataPage() {
                                         
                                         <div className="flex justify-between mb-3">
                                             <span className="text-xs bg-teal-50 px-2 py-1 rounded">
+
+                                <div className="bg-teal-50 px-6 py-4 rounded-2xl border border-teal-100 text-center">
+                                    <p className="text-[10px] font-black text-[#2E95A0] uppercase tracking-widest mb-1">Total Hospitals</p>
+                                    <p className="text-3xl font-black text-[#00464B]">{cityInfo.hospitals?.length || 0}</p>
+                                </div>
+                            </div>
+
+                            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {cityInfo.hospitals?.map((hospital) => (
+                                    <div key={hospital.id} className="group/card bg-white p-5 rounded-2xl border border-gray-100 hover:border-[#2E95A0] hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300">
+                                        <div className="flex justify-between items-start mb-4">
+                                            <span className="text-[10px] font-bold py-1 px-3 rounded-full bg-teal-50 text-[#2E95A0] uppercase tracking-wider">
+
                                                 {hospital.type}
                                             </span>
                                             <span>⭐ {hospital.rating}</span>
@@ -96,4 +127,8 @@ export default function HospitalDataPage() {
             </div>
         </div>
     );
+
 }
+
+}
+
