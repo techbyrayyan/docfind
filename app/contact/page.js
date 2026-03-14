@@ -1,14 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BookingSummary from "../../components/BookingSummary";
+
+const initialDoctorsList = [
+    { name: "Matthew Reyes" },
+    { name: "Kethryne Barlow" },
+    { name: "Robert Jawson" },
+    { name: "Julie Cronk" },
+    { name: "Jessica Lawson" }
+];
 
 export default function Contact() {
     const [contactData, setContactData] = useState({
         patientName: "",
-        email: "",
-        dob: "",
+        age: "",
+        reference: "",
         mobile: "",
+        address: "",
         gender: "",
         category: "",
         appointmentDate: "",
@@ -16,6 +25,17 @@ export default function Contact() {
         note: "",
         agreed: false
     });
+    const [availableDoctors, setAvailableDoctors] = useState([]);
+
+    useEffect(() => {
+        const registeredDoctors = JSON.parse(localStorage.getItem("registeredDoctors") || "[]");
+        const combinedDoctors = [...registeredDoctors, ...initialDoctorsList];
+        
+        // Ensure unique names in case of duplicates
+        const uniqueDoctors = Array.from(new Set(combinedDoctors.map(doc => doc.name)))
+                                   .map(name => ({ name }));
+        setAvailableDoctors(uniqueDoctors);
+    }, []);
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -55,16 +75,28 @@ export default function Contact() {
             return;
         }
 
-        console.log("Submitting Contact Data:", contactData);
-        localStorage.setItem("contactFormData", JSON.stringify(contactData));
-        alert("Booking confirmed! Data saved to local storage.");
+        const generatedPatientNumber = "PN-" + Math.floor(100000 + Math.random() * 900000);
+        const generatedCaseNumber = "CN-" + Math.floor(10000 + Math.random() * 90000);
+        const finalReference = contactData.reference.trim() === "" ? "No reference" : contactData.reference;
+
+        const dataToSave = {
+            ...contactData,
+            reference: finalReference,
+            patientNumber: generatedPatientNumber,
+            caseNumber: generatedCaseNumber
+        };
+
+        console.log("Submitting Contact Data:", dataToSave);
+        localStorage.setItem("contactFormData", JSON.stringify(dataToSave));
+        alert("Booking confirmed!\nPatient No: " + generatedPatientNumber + "\nCase No: " + generatedCaseNumber);
 
         // Reset form
         setContactData({
             patientName: "",
-            email: "",
-            dob: "",
+            age: "",
+            reference: "",
             mobile: "",
+            address: "",
             gender: "",
             category: "",
             appointmentDate: "",
@@ -110,7 +142,7 @@ export default function Contact() {
                                 name="patientName"
                                 value={contactData.patientName}
                                 onChange={handleChange}
-                                placeholder="Patient name"
+                                placeholder="Patient Name"
                                 className="w-full rounded-md border border-gray-300 p-3 pl-10 focus:ring-1 focus:ring-teal-600 focus:outline-none"
                                 required
                             />
@@ -118,30 +150,20 @@ export default function Contact() {
                         </div>
                         <div className="relative">
                             <input
-                                type="email"
-                                name="email"
-                                value={contactData.email}
+                                type="text"
+                                name="age"
+                                value={contactData.age}
                                 onChange={handleChange}
-                                placeholder="Email"
+                                placeholder="Age"
                                 className="w-full rounded-md border border-gray-300 p-3 pl-10 focus:ring-1 focus:ring-teal-600 focus:outline-none"
                                 required
                             />
-                            <i className="fa-solid fa-envelope absolute top-3.5 left-3 text-gray-400"></i>
+                            <i className="fa-solid fa-child absolute top-3.5 left-3 text-gray-400"></i>
                         </div>
                     </div>
 
                     {/* Row 2 */}
                     <div className="mb-4 grid grid-cols-1 gap-4 md:grid-cols-2">
-                        <div className="relative">
-                            <input
-                                type="date"
-                                name="dob"
-                                value={contactData.dob}
-                                onChange={handleChange}
-                                className="w-full rounded-md border border-gray-300 p-3 pl-10 focus:ring-1 focus:ring-teal-600 focus:outline-none"
-                            />
-                            <i className="fa-solid fa-calendar absolute top-3.5 left-3 text-gray-400"></i>
-                        </div>
                         <div className="relative">
                             <input
                                 type="text"
@@ -154,6 +176,30 @@ export default function Contact() {
                             />
                             <i className="fa-solid fa-phone absolute top-3.5 left-3 text-gray-400"></i>
                         </div>
+                        <div className="relative">
+                            <input
+                                type="text"
+                                name="reference"
+                                value={contactData.reference}
+                                onChange={handleChange}
+                                placeholder="Reference (Optional)"
+                                className="w-full rounded-md border border-gray-300 p-3 pl-10 focus:ring-1 focus:ring-teal-600 focus:outline-none"
+                            />
+                            <i className="fa-solid fa-users absolute top-3.5 left-3 text-gray-400"></i>
+                        </div>
+                    </div>
+
+                    {/* Address */}
+                    <div className="mb-4 relative">
+                        <input
+                            type="text"
+                            name="address"
+                            value={contactData.address}
+                            onChange={handleChange}
+                            placeholder="Home Address (Optional)"
+                            className="w-full rounded-md border border-gray-300 p-3 pl-10 focus:ring-1 focus:ring-teal-600 focus:outline-none"
+                        />
+                        <i className="fa-solid fa-location-dot absolute top-3.5 left-3 text-gray-400"></i>
                     </div>
 
                     {/* Gender */}
@@ -195,6 +241,11 @@ export default function Contact() {
                             <option value="General">General</option>
                             <option value="Cardiology">Cardiology</option>
                             <option value="Dental">Dental</option>
+                            <option value="ENT">ENT</option>
+                            <option value="Gastrologist">Gastrologist</option>
+                            <option value="Pulmonologist">Pulmonologist</option>
+                            <option value="Urologist">Urologist</option>
+                            <option value="Obstetrics & Gynecology">Obstetrics & Gynecology</option>
                         </select>
 
                         <div className="relative">
@@ -203,9 +254,10 @@ export default function Contact() {
                                 name="appointmentDate"
                                 value={contactData.appointmentDate}
                                 onChange={handleChange}
-                                className="w-full rounded-md border border-gray-300 p-3 pl-10 focus:ring-1 focus:ring-teal-600 focus:outline-none"
+                                className="w-full rounded-md border border-gray-300 p-3 pl-10 focus:ring-1 focus:ring-teal-600 focus:outline-none text-gray-500"
+                                required
                             />
-                            <i className="fa-solid fa-calendar absolute top-3.5 left-3 text-gray-400"></i>
+                            <i className="fa-solid fa-calendar-check absolute top-3.5 left-3 text-gray-400"></i>
                         </div>
 
                         <div className="relative">
@@ -216,8 +268,9 @@ export default function Contact() {
                                 className="w-full rounded-md border border-gray-300 p-3 pl-10 focus:ring-1 focus:ring-teal-600 focus:outline-none"
                             >
                                 <option value="">Select Doctor</option>
-                                <option value="Dr. Smith">Dr. Smith</option>
-                                <option value="Dr. Sarah">Dr. Sarah</option>
+                                {availableDoctors.map((doc, index) => (
+                                    <option key={index} value={doc.name}>{doc.name}</option>
+                                ))}
                             </select>
                             <i className="fa-solid fa-user-doctor absolute top-3.5 left-3 text-gray-400"></i>
                         </div>
